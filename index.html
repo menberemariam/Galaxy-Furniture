@@ -1,378 +1,784 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-on-surface":"#f8efea","primary-container":"#b9583b","surface-dim":"#e1d8d3","tertiary":"#7a5421","on-secondary-fixed-variant":"#394b3d","on-secondary-fixed":"#0e1f13","surface-container-low":"#fbf2ed","surface-variant":"#eae1dc","on-primary-container":"#fffbff","on-error-container":"#93000a","tertiary-fixed-dim":"#f0bd80","on-tertiary-fixed":"#2a1700","on-surface-variant":"#56423d","on-secondary":"#ffffff","secondary":"#506354","on-background":"#1f1b18","error":"#ba1a1a","background":"#fff8f5","on-primary":"#ffffff","primary-fixed":"#ffdbd1","outline":"#89726c","inverse-primary":"#ffb59f","on-primary-fixed-variant":"#7d2c13","tertiary-container":"#966d37","surface-container-highest":"#eae1dc","primary-fixed-dim":"#ffb59f","primary":"#994126","on-secondary-container":"#546758","on-surface":"#1f1b18","secondary-container":"#d0e5d2","on-tertiary":"#ffffff","surface-container-high":"#f0e6e1","secondary-fixed-dim":"#b7ccb9","surface-bright":"#fff8f5","surface-container":"#f5ece7","tertiary-fixed":"#ffddb7","error-container":"#ffdad6","on-error":"#ffffff","inverse-surface":"#34302c","surface-tint":"#9c4328","secondary-fixed":"#d3e8d5","surface-container-lowest":"#ffffff","on-primary-fixed":"#3a0a00","on-tertiary-container":"#fffbff","surface":"#fff8f5","outline-variant":"#dcc1b9","on-tertiary-fixed-variant":"#62400d"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-lg":"1.75rem","gutter-desktop":"2.5rem","margin":"1.25rem","margin-desktop":"4rem","space-xs":"0.25rem","space-sm":"0.5rem","gutter":"1.5rem","space-xl":"3rem","space-md":"1rem","space-2xl":"5rem"},"fontFamily":{"label-sm":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-sm":["Playfair Display"],"headline-md":["Playfair Display"],"display-hero":["Playfair Display"],"body-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"spec-numeral":["Plus Jakarta Sans"],"headline-lg-mobile":["Playfair Display"],"headline-lg":["Playfair Display"],"display-hero-mobile":["Playfair Display"],"label-md":["Plus Jakarta Sans"]},"fontSize":{"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.08em","fontWeight":"700"}],"title-md":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"headline-sm":["22px",{"lineHeight":"30px","fontWeight":"600"}],"headline-md":["28px",{"lineHeight":"36px","fontWeight":"500"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"spec-numeral":["20px",{"lineHeight":"28px","letterSpacing":"-0.02em","fontWeight":"300"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.01em","fontWeight":"400"}],"display-hero-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.01em","fontWeight":"400"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.04em","fontWeight":"600"}]}}}}</script>
+<title>Libson Atelier — Storefront &amp; Collection</title>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="style.css" />
-    <title>Lisbon Chair Shop</title>
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <div class="header-text-box">
-          <h1>We design and build better chairs, for a better life</h1>
-          <p class="header-text">
-            In a small shop in the heart of Lisbon, we spend our days
-            relentlessly perfecting the chair. The result is a perfect blend of
-            beauty and comfort, that will have a lasting impact on your health.
-          </p>
-          <a class="btn btn--big" href="#">Shop chairs</a>
-        </div>
-        <img src="hero.jpg" alt="Photo" />
-      </header>
-
-      <section>
-        <h2>What makes our chairs special</h2>
-        <div class="grid-3-cols">
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="features-icon"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
-              ></path>
-            </svg>
-            <p class="features-title"><strong>Science meets design</strong></p>
-            <p class="features-text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus
-              similique adipisci praesentium.
-            </p>
-          </div>
-
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="features-icon"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              ></path>
-            </svg>
-            <p class="features-title">
-              <strong>Maximal comfort</strong>
-            </p>
-            <p class="features-text">
-              Reprehenderit optio placeat quasi excepturi architecto, explicabo
-              facilis perspiciatis error maxime magnam.
-            </p>
-          </div>
-
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="features-icon"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-              ></path>
-            </svg>
-            <p class="features-title">
-              <strong>Ethical and sustainable</strong>
-            </p>
-            <p class="features-text">
-              Deleniti recusandae quidem nesciunt, eos dolorum iure, quaerat
-              omnis est laudantium voluptatem voluptas!
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="testimonial-section">
-        <div class="grid-3-cols">
-          <img src="customers.jpg" alt="People sitting on chairs" />
-          <div class="testimonial-box">
-            <h2>"We couldn't live without these chairs anymore"</h2>
-            <blockquote class="testimonial-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
-              repellat at, nesciunt quia cum minima ipsum culpa totam sapiente
-              recusandae earum debitis doloribus in quasi voluptatibus!
-            </blockquote>
-            <p class="testimonial-author">— Mary and Sarah Johnson</p>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>Our bestselling chairs</h2>
-        <div class="grid-3-cols">
-          <figure class="chair">
-            <img src="chair-1.jpg" alt="Chair" />
-            <div class="chair-box">
-              <h3>The Laid Back</h3>
-              <ul class="chair-details">
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="chair-icon"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                    ></path>
-                  </svg>
-                  <!-- Span is a generic INLINE text element, it doesn't have any meaning. It's like a div element, but inline -->
-                  <span>Leisure and relaxing</span>
-                </li>
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="chair-icon"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                    ></path>
-                  </svg>
-                  <span>Comfortable for 4h</span>
-                </li>
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="chair-icon"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                    ></path>
-                  </svg>
-                  <span>Vegan leather</span>
-                </li>
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="chair-icon"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
-                    ></path>
-                  </svg>
-                  <span>Weighs 16 kg</span>
-                </li>
-              </ul>
-              <div class="chair-price">
-                <strong>250€</strong>
-                <a href="#" class="btn btn--small">Add to cart</a>
-              </div>
-            </div>
-          </figure>
-
-          <figure class="chair">
-            <img src="chair-2.jpg" alt="Chair" />
-            <div class="chair-box">
-              <h3>The Worker Bee</h3>
-              <ul class="chair-details">
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="chair-icon"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                    ></path>
-                  </svg>
-                  <span>Work</span>
-                </li>
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="chair-icon"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                    ></path>
-                  </svg>
-                  <span>Comfortable for 8h</span>
-                </li>
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="chair-icon"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                    ></path>
-                  </svg>
-                  <span>Vegan leather</span>
-                </li>
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="chair-icon"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
-                    ></path>
-                  </svg>
-                  <span>Weighs 22 kg</span>
-                </li>
-              </ul>
-              <div class="chair-price">
-                <strong>525€</strong>
-                <a href="#" class="btn btn--small">Add to cart</a>
-              </div>
-            </div>
-          </figure>
-
-          <figure class="chair">
-            <img src="chair-3.jpg" alt="Chair" />
-            <div class="chair-box">
-              <h3>The Chair 4/2</h3>
-              <ul class="chair-details">
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="chair-icon"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                    ></path>
-                  </svg>
-                  <span>Leisure and relaxing</span>
-                </li>
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="chair-icon"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                    ></path>
-                  </svg>
-                  <span>Comfortable all day!</span>
-                </li>
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="chair-icon"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                    ></path>
-                  </svg>
-                  <span>Organic cotton</span>
-                </li>
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="chair-icon"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
-                    ></path>
-                  </svg>
-                  <span>Weighs 80 kg</span>
-                </li>
-              </ul>
-              <div class="chair-price">
-                <strong>1450€</strong>
-                <a href="#" class="btn btn--small">Add to cart</a>
-              </div>
-            </div>
-          </figure>
-        </div>
-      </section>
-
-      <footer>
-        Copyright © 2027 by Jonas Schmedtmann. Part of "Build Responsive
-        Real-World Websites with HTML and CSS" online course. Use for learning
-        purposes only.
-      </footer>
+<!-- Reusable header: announcement bar + sticky nav -->
+<header class="fixed top-0 left-0 right-0 z-50 w-full">
+  <div class="w-full bg-surface-container text-on-surface-variant py-2 px-margin lg:px-margin-desktop flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.02)]">
+    <div class="flex items-center gap-space-sm">
+      <span class="material-symbols-outlined text-secondary text-[16px]">award_star</span>
+      <p class="font-label-sm text-label-sm tracking-wider uppercase">Complimentary White-Glove In-Home Assembly on Orders Over ETB 180,000 · 100-Day Atelier Trial</p>
     </div>
-  </body>
+    <div class="hidden md:flex items-center gap-space-md">
+      <span class="font-label-sm text-label-sm tracking-wider uppercase text-on-surface-variant/80">København Studio · CPH Mon-Fri 09-18</span>
+      <div class="h-3 w-px bg-outline-variant/60"></div>
+      <span class="font-label-sm text-label-sm text-on-surface flex items-center gap-space-xs cursor-pointer hover:text-primary transition-colors">
+        <span class="material-symbols-outlined text-[14px]">verified</span>Certified FSC® C108249
+      </span>
+    </div>
+  </div>
+  <div class="h-20 w-full bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="w-full h-full px-margin lg:px-margin-desktop flex items-center justify-between gap-space-md">
+      <div class="flex items-center gap-space-md flex-shrink-0">
+        <!-- Self-contained logo mark -->
+        <a href="index.html" class="flex items-center gap-space-md flex-shrink-0">
+          <div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-on-primary text-[22px]">chair</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-headline-sm text-headline-sm tracking-tight text-on-surface leading-none">Libson</span>
+            <span class="font-label-sm text-[10px] tracking-[0.2em] text-on-surface-variant uppercase mt-space-xs">Atelier København</span>
+          </div>
+        </a>
+      </div>
+      <nav class="hidden xl:flex items-center gap-space-lg">
+        <a class="font-label-md text-label-md tracking-wider text-primary font-semibold border-b border-primary py-1" href="index.html">Storefront &amp; Collection</a>
+        <a class="font-label-md text-label-md tracking-wider text-on-surface-variant hover:text-on-surface transition-colors py-1" href="catalog.html">Full Catalog &amp; Filters</a>
+        <a class="font-label-md text-label-md tracking-wider text-on-surface-variant hover:text-on-surface transition-colors py-1" href="configurator.html">Configurator &amp; Dossier</a>
+        <a class="font-label-md text-label-md tracking-wider text-on-surface-variant hover:text-on-surface transition-colors py-1" href="checkout.html">Ergonomic Trial &amp; Concierge</a>
+        <a class="font-label-md text-label-md tracking-wider text-on-surface-variant hover:text-on-surface transition-colors py-1" href="about.html">About Atelier</a>
+      </nav>
+      <div class="flex items-center gap-space-sm lg:gap-space-md">
+        <div class="hidden sm:flex items-center gap-space-xs bg-surface-container px-space-sm py-1.5 rounded-full text-on-surface-variant cursor-pointer hover:bg-surface-container-high transition-colors">
+          <span class="material-symbols-outlined text-[16px]">public</span>
+          <span class="font-label-sm text-label-sm uppercase text-on-surface">ETB</span>
+          <span class="material-symbols-outlined text-[14px]">expand_more</span>
+        </div>
+        <form class="relative hidden md:flex items-center" action="catalog.html" method="get" role="search" data-search-form>
+          <input class="w-48 lg:w-60 bg-surface-container-low pl-9 pr-3 py-1.5 rounded-full font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:bg-surface-container transition-all" name="q" placeholder="Search ergonomic silhouettes..." type="search" aria-label="Search chairs"/>
+          <span class="material-symbols-outlined absolute left-2.5 text-on-surface-variant text-[18px] pointer-events-none">search</span>
+        </form>
+        <a aria-label="Wishlist" class="relative p-2 text-on-surface-variant hover:text-on-surface transition-colors" href="wishlist.html">
+          <span class="material-symbols-outlined text-[22px]">favorite</span>
+          <span data-wishlist-count class="absolute top-1 right-1 h-4 w-4 bg-primary text-on-primary font-label-sm text-[10px] rounded-full flex items-center justify-center font-bold">3</span>
+        </a>
+        <a aria-label="Shopping Bag" class="flex items-center gap-space-xs bg-surface-container hover:bg-surface-container-high px-space-md py-2 rounded-full transition-all" href="cart.html">
+          <span class="material-symbols-outlined text-primary text-[20px]">shopping_bag</span>
+          <div class="flex flex-col text-left">
+            <span data-cart-total class="font-label-sm text-label-sm text-on-surface font-semibold">ETB 276,000</span>
+            <span data-cart-count class="font-label-sm text-[10px] text-on-surface-variant">2 items</span>
+          </div>
+        </a>
+        <a href="profile.html" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0" aria-label="Account">
+          <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="w-full pt-28 bg-surface">
+<div class="flex flex-col w-full">
+
+<!-- SECTION 1: ASYMMETRIC EDITORIAL HERO -->
+<section class="relative w-full px-margin lg:px-margin-desktop py-space-xl lg:py-space-2xl overflow-hidden">
+  <div class="absolute -top-32 -left-20 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+  <div class="absolute top-1/2 -right-32 w-[32rem] h-[32rem] rounded-full bg-secondary/5 blur-3xl pointer-events-none"></div>
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+    <!-- Left Narrative (7 Cols) -->
+    <div class="lg:col-span-7 flex flex-col gap-space-lg relative z-10">
+      <div class="flex items-center gap-space-sm">
+        <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary/15 text-secondary">
+          <span class="material-symbols-outlined text-[14px]">nature</span>
+        </span>
+        <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Copenhagen Craft Archive · Opus MMXXV</span>
+      </div>
+      <div class="flex flex-col gap-space-sm">
+        <h1 class="font-display-hero text-display-hero text-on-surface tracking-tight leading-[1.08]">
+          Seating Sculpted for <br/>
+          <span class="italic font-light text-primary">Human Form</span> &amp; Quiet Spaces.
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed mt-space-sm">
+          Rooted in Danish architectural heritage and precision biometric ergonomics. Handcrafted from sustainably harvested European White Oak, Italian semi-aniline leather, and responsive dynamic lumbar engineering.
+        </p>
+      </div>
+      <!-- Action Matrix -->
+      <div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+        <a class="inline-flex items-center justify-center gap-space-sm bg-primary text-on-primary font-label-md text-label-md px-8 py-3.5 rounded-full shadow-md hover:bg-primary-container transition-all hover:scale-[1.01] active:scale-[0.99]" href="catalog.html">
+          <span>Explore The Atelier Collection</span>
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </a>
+        <button class="inline-flex items-center justify-center gap-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md px-7 py-3.5 rounded-full shadow-sm transition-all hover:scale-[1.01]" data-book-trial type="button">
+          <span class="material-symbols-outlined text-tertiary text-[18px]">calendar_today</span>
+          <span>Book In-Studio Ergonomic Trial</span>
+        </button>
+      </div>
+      <!-- Metric micro-badges -->
+      <div class="grid grid-cols-3 gap-space-md pt-space-lg max-w-lg">
+        <div class="flex flex-col">
+          <span class="font-spec-numeral text-spec-numeral text-on-surface font-light">100%</span>
+          <span class="font-label-sm text-[11px] text-on-surface-variant uppercase tracking-wider mt-1">Nordic Certified Oak</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-spec-numeral text-spec-numeral text-on-surface font-light">14°</span>
+          <span class="font-label-sm text-[11px] text-on-surface-variant uppercase tracking-wider mt-1">Pelvic Synchrony Tilt</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-spec-numeral text-spec-numeral text-on-surface font-light">10-Yr</span>
+          <span class="font-label-sm text-[11px] text-on-surface-variant uppercase tracking-wider mt-1">Structural Warranty</span>
+        </div>
+      </div>
+    </div>
+    <!-- Right Visual Plate: Flagship No. 01 Card (5 Cols) -->
+    <div class="lg:col-span-5 relative mt-space-lg lg:mt-0">
+      <div class="relative w-full rounded-2xl bg-surface-container p-6 lg:p-8 shadow-xl flex flex-col gap-space-md">
+        <div class="flex items-center justify-between">
+          <span class="bg-surface-container-lowest px-3 py-1 rounded-full font-label-sm text-label-sm tracking-wider uppercase text-on-surface-variant shadow-sm flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-primary text-[14px]">star</span> No. 01 Executive
+          </span>
+          <span class="font-spec-numeral text-on-surface text-title-md font-medium">ETB 177,000</span>
+        </div>
+        <!-- Product Visual with Focal Biometric Anchors -->
+        <div class="relative w-full h-[380px] rounded-xl overflow-hidden bg-surface-container-high flex items-center justify-center group">
+          <img alt="Libson No. 01 Executive ergonomic chair in Danish white oak and cognac leather" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/office-chair.jpg"/>
+          <!-- Biometric Pin 1: Synchronous Lumbar -->
+          <div class="absolute top-1/3 left-10 flex items-center gap-2 group/pin cursor-pointer">
+            <span class="relative flex h-4 w-4">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-4 w-4 bg-primary text-on-primary items-center justify-center font-label-sm text-[9px] font-bold">1</span>
+            </span>
+            <div class="bg-surface/95 backdrop-blur-md px-3 py-1 rounded-lg shadow-md pointer-events-none transform -translate-x-1 opacity-0 group-hover/pin:opacity-100 group-hover/pin:translate-x-0 transition-all">
+              <p class="font-label-sm text-label-sm text-on-surface font-semibold whitespace-nowrap">Synchronous 4-Point Tilt</p>
+              <p class="font-body-sm text-[11px] text-on-surface-variant">Calibrated spine pressure relief</p>
+            </div>
+          </div>
+          <!-- Biometric Pin 2: Saddle Leather -->
+          <div class="absolute bottom-20 right-8 flex items-center gap-2 group/pin cursor-pointer flex-row-reverse">
+            <span class="relative flex h-4 w-4">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-4 w-4 bg-secondary text-on-secondary items-center justify-center font-label-sm text-[9px] font-bold">2</span>
+            </span>
+            <div class="bg-surface/95 backdrop-blur-md px-3 py-1 rounded-lg shadow-md pointer-events-none transform translate-x-1 opacity-0 group-hover/pin:opacity-100 group-hover/pin:translate-x-0 transition-all text-right">
+              <p class="font-label-sm text-label-sm text-on-surface font-semibold whitespace-nowrap">Pure Saddle Leather</p>
+              <p class="font-body-sm text-[11px] text-on-surface-variant">Tuscan vegetable-tanned patina</p>
+            </div>
+          </div>
+        </div>
+        <!-- Quick Feature Highlights -->
+        <div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+          <div class="bg-surface-container-low p-3.5 rounded-xl">
+            <p class="font-label-sm text-[11px] uppercase tracking-wider text-on-surface-variant">Mechanism</p>
+            <p class="font-title-md text-[14px] text-on-surface font-semibold mt-0.5">Self-Balancing Tension</p>
+          </div>
+          <div class="bg-surface-container-low p-3.5 rounded-xl">
+            <p class="font-label-sm text-[11px] uppercase tracking-wider text-on-surface-variant">Timber Framing</p>
+            <p class="font-title-md text-[14px] text-on-surface font-semibold mt-0.5">FSC® Nordic White Oak</p>
+          </div>
+        </div>
+        <!-- Bottom Card Action -->
+        <div class="flex items-center justify-between pt-space-xs">
+          <span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span> Ready to dispatch in 48 hrs
+          </span>
+          <a class="font-label-md text-label-md text-primary hover:text-primary-container flex items-center gap-1 font-semibold group" href="configurator.html">
+            <span>View Dossier</span>
+            <span class="material-symbols-outlined text-[16px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: CRAFT & MATERIAL PILLARS -->
+<section class="w-full bg-surface-container-low py-space-2xl px-margin lg:px-margin-desktop">
+  <div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+      <div class="flex flex-col gap-space-xs max-w-xl">
+        <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Uncompromising Sourcing</span>
+        <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">The Three Pillars of Libson Longevity</h2>
+      </div>
+      <p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+        Unlike disposable corporate seating, our chairs are architectural heirlooms engineered to age gracefully across decades of daily intellectual labor.
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop">
+      <!-- Pillar 1 -->
+      <div class="bg-surface rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-md group">
+        <div class="w-14 h-14 rounded-xl bg-secondary-container/50 text-secondary flex items-center justify-center transition-transform group-hover:scale-110">
+          <span class="material-symbols-outlined text-[30px]">forest</span>
+        </div>
+        <div class="flex flex-col gap-space-xs">
+          <span class="font-label-sm text-[10px] tracking-[0.2em] text-on-surface-variant uppercase">Substance &amp; Grain</span>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Nordic White Oak &amp; Danish Joinery</h3>
+        </div>
+        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Sourced exclusively from certified Danish and Swedish managed forests (FSC® C108249). Steam-bent utilizing ancestral mortise-and-tenon structural joints that breathe with indoor climate variations.
+        </p>
+        <div class="mt-auto pt-space-sm flex items-center gap-space-xs text-secondary font-label-sm text-label-sm">
+          <span class="material-symbols-outlined text-[16px]">verified</span> Zero VOC Plant-Oil Finish
+        </div>
+      </div>
+      <!-- Pillar 2 -->
+      <div class="bg-surface rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-md group">
+        <div class="w-14 h-14 rounded-xl bg-primary-fixed/40 text-primary flex items-center justify-center transition-transform group-hover:scale-110">
+          <span class="material-symbols-outlined text-[30px]">texture</span>
+        </div>
+        <div class="flex flex-col gap-space-xs">
+          <span class="font-label-sm text-[10px] tracking-[0.2em] text-on-surface-variant uppercase">Tactile Upholstery</span>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Full-Grain Leather &amp; Virgin Wool Bouclé</h3>
+        </div>
+        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Supplied by fifth-generation tanneries in Arzignano and wool weavers in Gotland. Each hide breathes naturally, accumulating a distinctive golden patina rather than cracking over prolonged friction.
+        </p>
+        <div class="mt-auto pt-space-sm flex items-center gap-space-xs text-primary font-label-sm text-label-sm">
+          <span class="material-symbols-outlined text-[16px]">workspace_premium</span> OEKO-TEX® Standard 100
+        </div>
+      </div>
+      <!-- Pillar 3 -->
+      <div class="bg-surface rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-md group">
+        <div class="w-14 h-14 rounded-xl bg-surface-variant text-tertiary flex items-center justify-center transition-transform group-hover:scale-110">
+          <span class="material-symbols-outlined text-[30px]">vital_signs</span>
+        </div>
+        <div class="flex flex-col gap-space-xs">
+          <span class="font-label-sm text-[10px] tracking-[0.2em] text-on-surface-variant uppercase">Biomechanics</span>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Physiotherapist-Certified Alignment</h3>
+        </div>
+        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Co-engineered with orthopedists at Copenhagen Rigshospitalet. Conforms strictly to ANSI/BIFMA X5.1 and European EN 1335 standards for continuous, fatigue-free 12-hour contemplative focus.
+        </p>
+        <div class="mt-auto pt-space-sm flex items-center gap-space-xs text-tertiary font-label-sm text-label-sm">
+          <span class="material-symbols-outlined text-[16px]">medical_services</span> Spine Curvature Compliant
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: ICONIC SILHOUETTES & FINISH MATRIX -->
+<section class="w-full py-space-2xl px-margin lg:px-margin-desktop" id="flagship-collection">
+  <div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+    <!-- Section Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+      <div class="flex flex-col gap-space-xs">
+        <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Atelier Core Silhouettes</span>
+        <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">The Three Flagship Expressions</h2>
+      </div>
+      <!-- Filter Pills -->
+      <div class="flex flex-wrap items-center gap-2">
+        <button class="filter-btn bg-on-surface text-surface font-label-sm text-label-sm px-4 py-2 rounded-full transition-all" type="button">All Editions (12)</button>
+        <button class="filter-btn bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm px-4 py-2 rounded-full transition-all" type="button">Task Ergonomic</button>
+        <button class="filter-btn bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm px-4 py-2 rounded-full transition-all" type="button">Lounge &amp; Recline</button>
+        <button class="filter-btn bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm px-4 py-2 rounded-full transition-all" type="button">Architectural Dining</button>
+      </div>
+    </div>
+    <!-- Chair Showcase Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter-desktop">
+      <!-- Chair 1 -->
+      <article class="product-card bg-surface-container rounded-2xl overflow-hidden flex flex-col shadow-sm hover:shadow-xl transition-all duration-300 group">
+        <div class="relative w-full h-80 overflow-hidden bg-surface-variant flex items-center justify-center p-6">
+          <span class="absolute top-4 left-4 z-10 bg-primary text-on-primary font-label-sm text-[10px] uppercase tracking-widest px-3 py-1 rounded-full font-bold shadow-sm">Staff Pick</span>
+          <button class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-surface/80 hover:bg-surface flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors shadow-sm" type="button" aria-label="Add to wishlist">
+            <span class="material-symbols-outlined text-[18px]">favorite</span>
+          </button>
+          <img alt="Libson No. 01 Executive chair in Danish white oak with cognac saddle leather" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-xl" id="chair-img-1" src="images/office-chair.jpg"/>
+        </div>
+        <div class="p-6 flex flex-col gap-space-sm flex-1">
+          <div class="flex items-baseline justify-between">
+            <h3 class="font-headline-sm text-headline-sm text-on-surface">Libson No. 01 Executive</h3>
+            <span class="font-spec-numeral text-spec-numeral text-on-surface font-medium">ETB 177,000</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            Engineered with 4-point dynamic tilt, floating spine curvature, and solid oak frame. Perfect for 10+ hours daily focus.
+          </p>
+          <!-- Swatches Matrix -->
+          <div class="flex flex-col gap-1.5 pt-space-xs">
+            <span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Select Upholstery &amp; Timber</span>
+            <div class="flex items-center gap-2">
+              <button class="swatch-btn w-6 h-6 rounded-full bg-[#994126] shadow-sm transform scale-110 ring-2 ring-primary ring-offset-2 ring-offset-surface-container transition-all" onclick="setSwatch('swatch-1-1', 'chair-img-1')" title="Cognac Saddle Leather" type="button" aria-label="Cognac Saddle Leather"></button>
+              <button class="swatch-btn w-6 h-6 rounded-full bg-[#dcc1b9] shadow-sm hover:scale-110 transition-all" onclick="setSwatch('swatch-1-2', 'chair-img-1')" title="Natural White Oak &amp; Sand" type="button" aria-label="Natural White Oak and Sand"></button>
+              <button class="swatch-btn w-6 h-6 rounded-full bg-[#34302c] shadow-sm hover:scale-110 transition-all" onclick="setSwatch('swatch-1-3', 'chair-img-1')" title="Deep Smoked Walnut" type="button" aria-label="Deep Smoked Walnut"></button>
+              <button class="swatch-btn w-6 h-6 rounded-full bg-[#506354] shadow-sm hover:scale-110 transition-all" onclick="setSwatch('swatch-1-4', 'chair-img-1')" title="Nordic Moss Wool" type="button" aria-label="Nordic Moss Wool"></button>
+            </div>
+          </div>
+          <!-- Footer Details -->
+          <div class="mt-auto pt-space-md flex items-center justify-between">
+            <span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+              <span class="material-symbols-outlined text-[14px]">local_shipping</span> White-glove assembly
+            </span>
+            <a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary font-bold hover:underline" href="configurator.html">
+              Configure <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+            </a>
+          </div>
+        </div>
+      </article>
+      <!-- Chair 2 -->
+      <article class="product-card bg-surface-container rounded-2xl overflow-hidden flex flex-col shadow-sm hover:shadow-xl transition-all duration-300 group">
+        <div class="relative w-full h-80 overflow-hidden bg-surface-variant flex items-center justify-center p-6">
+          <span class="absolute top-4 left-4 z-10 bg-secondary text-on-secondary font-label-sm text-[10px] uppercase tracking-widest px-3 py-1 rounded-full font-bold shadow-sm">Architectural Digest Award</span>
+          <button class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-surface/80 hover:bg-surface flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors shadow-sm" type="button" aria-label="Add to wishlist">
+            <span class="material-symbols-outlined text-[18px]">favorite</span>
+          </button>
+          <img alt="Klint Lounge and Ottoman in oatmeal bouclé with smoked oak base" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-xl" id="chair-img-2" src="images/brown-lounge.jpg"/>
+        </div>
+        <div class="p-6 flex flex-col gap-space-sm flex-1">
+          <div class="flex items-baseline justify-between">
+            <h3 class="font-headline-sm text-headline-sm text-on-surface">Klint Lounge &amp; Ottoman</h3>
+            <span class="font-spec-numeral text-spec-numeral text-on-surface font-medium">ETB 217,500</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            Deep-seated contemplation armchair paired with matching contoured ottoman. Continuous ergonomic pelvic incline.
+          </p>
+          <!-- Swatches Matrix -->
+          <div class="flex flex-col gap-1.5 pt-space-xs">
+            <span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Select Upholstery &amp; Timber</span>
+            <div class="flex items-center gap-2">
+              <button class="swatch-btn w-6 h-6 rounded-full bg-[#eae1dc] shadow-sm transform scale-110 ring-2 ring-primary ring-offset-2 ring-offset-surface-container transition-all" title="Oatmeal Bouclé" type="button" aria-label="Oatmeal Boucle"></button>
+              <button class="swatch-btn w-6 h-6 rounded-full bg-[#56423d] shadow-sm hover:scale-110 transition-all" title="Charcoal Walnut" type="button" aria-label="Charcoal Walnut"></button>
+              <button class="swatch-btn w-6 h-6 rounded-full bg-[#b9583b] shadow-sm hover:scale-110 transition-all" title="Terracotta Leather" type="button" aria-label="Terracotta Leather"></button>
+              <button class="swatch-btn w-6 h-6 rounded-full bg-[#7a5421] shadow-sm hover:scale-110 transition-all" title="Danish Tobacco Oak" type="button" aria-label="Danish Tobacco Oak"></button>
+            </div>
+          </div>
+          <!-- Footer Details -->
+          <div class="mt-auto pt-space-md flex items-center justify-between">
+            <span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+              <span class="material-symbols-outlined text-[14px]">local_shipping</span> 2-box insured freight
+            </span>
+            <a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary font-bold hover:underline" href="configurator.html">
+              Configure <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+            </a>
+          </div>
+        </div>
+      </article>
+      <!-- Chair 3 -->
+      <article class="product-card bg-surface-container rounded-2xl overflow-hidden flex flex-col shadow-sm hover:shadow-xl transition-all duration-300 group">
+        <div class="relative w-full h-80 overflow-hidden bg-surface-variant flex items-center justify-center p-6">
+          <span class="absolute top-4 left-4 z-10 bg-tertiary-container text-on-tertiary-container font-label-sm text-[10px] uppercase tracking-widest px-3 py-1 rounded-full font-bold shadow-sm">Bestseller</span>
+          <button class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-surface/80 hover:bg-surface flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors shadow-sm" type="button" aria-label="Add to wishlist">
+            <span class="material-symbols-outlined text-[18px]">favorite</span>
+          </button>
+          <img alt="Nora Dining Armchair in natural beech with hand-woven paper cord seat" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-xl" id="chair-img-3" src="images/dining-chairs.jpg"/>
+        </div>
+        <div class="p-6 flex flex-col gap-space-sm flex-1">
+          <div class="flex items-baseline justify-between">
+            <h3 class="font-headline-sm text-headline-sm text-on-surface">Nora Dining Armchair</h3>
+            <span class="font-spec-numeral text-spec-numeral text-on-surface font-medium">ETB 73,500</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            Sculpted wraparound steam-bent backrest designed for uninterrupted multi-hour dinner conversations and dining posture.
+          </p>
+          <!-- Swatches Matrix -->
+          <div class="flex flex-col gap-1.5 pt-space-xs">
+            <span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Select Upholstery &amp; Timber</span>
+            <div class="flex items-center gap-2">
+              <button class="swatch-btn w-6 h-6 rounded-full bg-[#f0e6e1] shadow-sm transform scale-110 ring-2 ring-primary ring-offset-2 ring-offset-surface-container transition-all" title="Oiled Natural Beech" type="button" aria-label="Oiled Natural Beech"></button>
+              <button class="swatch-btn w-6 h-6 rounded-full bg-[#1f1b18] shadow-sm hover:scale-110 transition-all" title="Carbon Black Lacquer" type="button" aria-label="Carbon Black Lacquer"></button>
+              <button class="swatch-btn w-6 h-6 rounded-full bg-[#d0e5d2] shadow-sm hover:scale-110 transition-all" title="Sage Green Cord" type="button" aria-label="Sage Green Cord"></button>
+              <button class="swatch-btn w-6 h-6 rounded-full bg-[#966d37] shadow-sm hover:scale-110 transition-all" title="Natural Papercord" type="button" aria-label="Natural Papercord"></button>
+            </div>
+          </div>
+          <!-- Footer Details -->
+          <div class="mt-auto pt-space-md flex items-center justify-between">
+            <span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+              <span class="material-symbols-outlined text-[14px]">inventory_2</span> Box of 2 available
+            </span>
+            <a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary font-bold hover:underline" href="configurator.html">
+              Configure <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: ERGONOMIC ANATOMY BREAKDOWN -->
+<section class="w-full bg-surface-container-high py-space-2xl px-margin lg:px-margin-desktop relative overflow-hidden">
+  <div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+    <div class="text-center max-w-2xl mx-auto flex flex-col gap-space-xs">
+      <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Biomechanical Blueprint</span>
+      <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">The Anatomy of Pure Equilibrium</h2>
+      <p class="font-body-md text-body-md text-on-surface-variant">
+        Every contour exists for a scientific reason. We stripped away clunky plastic knobs, embedding adaptive biomechanics directly into tactile Danish timber.
+      </p>
+    </div>
+    <!-- Architectural Anatomy Bento Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+      <!-- Anatomy Technical Drawing & Center Piece (6 Cols) -->
+      <div class="lg:col-span-6 relative bg-surface rounded-2xl p-6 shadow-md flex flex-col items-center justify-center">
+        <div class="w-full h-96 relative flex items-center justify-center overflow-hidden rounded-xl bg-surface-container">
+          <img alt="Technical blueprint of an ergonomic chair with lumbar angle measurements" class="w-full h-full object-cover mix-blend-multiply opacity-90" src="images/office-desk.jpg"/>
+          <!-- Floating Diagnostic Markers -->
+          <div class="absolute top-10 left-8 bg-surface-container-lowest/90 backdrop-blur-sm p-3 rounded-lg shadow-sm">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+              <span class="font-label-sm text-label-sm text-on-surface uppercase font-bold">Lordosis Arch</span>
+            </div>
+            <p class="font-body-sm text-[12px] text-on-surface-variant mt-1">L1–L5 vertebrae curvature neutralizer</p>
+          </div>
+          <div class="absolute bottom-10 right-8 bg-surface-container-lowest/90 backdrop-blur-sm p-3 rounded-lg shadow-sm">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+              <span class="font-label-sm text-label-sm text-on-surface uppercase font-bold">Popliteal Relief</span>
+            </div>
+            <p class="font-body-sm text-[12px] text-on-surface-variant mt-1">45mm waterfall thigh drop</p>
+          </div>
+        </div>
+        <!-- Live Interactive Tilt Slider Simulation -->
+        <div class="w-full pt-6 flex flex-col gap-2">
+          <div class="flex justify-between items-center text-on-surface font-label-sm text-label-sm">
+            <span class="uppercase tracking-wider">Dynamic Lumbar Resistance</span>
+            <span class="font-bold text-primary" id="resistance-label">64 kg/m² (Balanced)</span>
+          </div>
+          <input class="w-full accent-primary h-2 bg-surface-container-highest rounded-lg cursor-pointer" id="resistance-slider" max="110" min="40" oninput="document.getElementById('resistance-label').innerText = this.value + ' kg/m² (' + (this.value > 85 ? 'Firm Focus' : this.value < 55 ? 'Gentle Recline' : 'Balanced') + ')'" type="range" value="64"/>
+          <div class="flex justify-between text-on-surface-variant font-label-sm text-[10px] uppercase">
+            <span>Featherweight (40kg)</span>
+            <span>Atelier Neutral</span>
+            <span>Heavyweight (110kg)</span>
+          </div>
+        </div>
+      </div>
+      <!-- 4 Ergonomic Callout Modules (6 Cols) -->
+      <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+        <!-- Mod 1 -->
+        <div class="bg-surface p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-xs">
+          <div class="w-10 h-10 rounded-full bg-primary-fixed/50 text-primary flex items-center justify-center">
+            <span class="material-symbols-outlined text-[20px]">airline_seat_recline_normal</span>
+          </div>
+          <h4 class="font-headline-sm text-[18px] text-on-surface pt-2">Dynamic Pelvic Cradle</h4>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            The lower chassis shifts automatically with your sacrum, deterring the micro-slumping that causes disc compression.
+          </p>
+          <span class="font-spec-numeral text-primary text-[14px] font-semibold mt-auto pt-2">Angle: 98° → 114°</span>
+        </div>
+        <!-- Mod 2 -->
+        <div class="bg-surface p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-xs">
+          <div class="w-10 h-10 rounded-full bg-secondary-fixed/50 text-secondary flex items-center justify-center">
+            <span class="material-symbols-outlined text-[20px]">pan_tool_alt</span>
+          </div>
+          <h4 class="font-headline-sm text-[18px] text-on-surface pt-2">4D Fluid Armrests</h4>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            Carved oak arm pads pivot 30° inward for keyboard drafting or slide back flush to slide beneath slim desks.
+          </p>
+          <span class="font-spec-numeral text-secondary text-[14px] font-semibold mt-auto pt-2">Travel: 75mm Vert / 40mm Horiz</span>
+        </div>
+        <!-- Mod 3 -->
+        <div class="bg-surface p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-xs">
+          <div class="w-10 h-10 rounded-full bg-surface-variant text-tertiary flex items-center justify-center">
+            <span class="material-symbols-outlined text-[20px]">water_drop</span>
+          </div>
+          <h4 class="font-headline-sm text-[18px] text-on-surface pt-2">Waterfall Seat Edge</h4>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            A gently sloping forward lip eliminates circulation pinch-points beneath the hamstrings during extended concentration.
+          </p>
+          <span class="font-spec-numeral text-tertiary text-[14px] font-semibold mt-auto pt-2">Sub-fascial flow +34%</span>
+        </div>
+        <!-- Mod 4 -->
+        <div class="bg-surface p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-xs">
+          <div class="w-10 h-10 rounded-full bg-primary-fixed/50 text-primary flex items-center justify-center">
+            <span class="material-symbols-outlined text-[20px]">tune</span>
+          </div>
+          <h4 class="font-headline-sm text-[18px] text-on-surface pt-2">Silent Brass Gas-Lift</h4>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            German-engineered Class 4 hydraulic piston enveloped in a solid timber column sleeve. Utterly noiseless elevation.
+          </p>
+          <span class="font-spec-numeral text-primary text-[14px] font-semibold mt-auto pt-2">Tolerance: 0.12mm Nitrogen sealed</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: CUSTOMER VOICES & ATELIER REVIEWS -->
+<section class="w-full py-space-2xl px-margin lg:px-margin-desktop">
+  <div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+    <!-- Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+      <div class="flex flex-col gap-space-xs">
+        <div class="flex items-center gap-1.5 text-primary">
+          <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="font-label-md text-label-md text-on-surface ml-2 font-bold">4.92 / 5.0</span>
+          <span class="font-body-sm text-body-sm text-on-surface-variant">(428 Verified Patrons)</span>
+        </div>
+        <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Appraisals from Architects &amp; Clinicians</h2>
+      </div>
+      <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">
+        Tested and chosen by architectural practices, Scandinavian design curators, and restorative therapy practitioners.
+      </p>
+    </div>
+    <!-- Testimonials Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop">
+      <!-- Review 1 -->
+      <div class="bg-surface-container rounded-2xl p-8 shadow-sm flex flex-col justify-between gap-space-md">
+        <div class="flex flex-col gap-space-sm">
+          <div class="flex items-center gap-1 text-primary">
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          </div>
+          <p class="font-headline-sm text-[19px] text-on-surface italic font-normal leading-snug">
+            "The Libson No. 01 solved the historic tension between visual elegance and orthopedic support in my studio."
+          </p>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Black mesh plastic task chairs ruined the integrity of our architectural practice. Libson delivers supreme spinal curvature in oak and full-grain leather.
+          </p>
+        </div>
+        <div class="flex items-center gap-space-sm pt-space-xs">
+          <div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center font-bold text-on-surface-variant">SM</div>
+          <div class="flex flex-col">
+            <span class="font-label-md text-label-md text-on-surface">Signe Møller</span>
+            <span class="font-body-sm text-[12px] text-on-surface-variant">Lead Architect, Studio Møller CPH</span>
+          </div>
+        </div>
+      </div>
+      <!-- Review 2 -->
+      <div class="bg-surface-container rounded-2xl p-8 shadow-sm flex flex-col justify-between gap-space-md">
+        <div class="flex flex-col gap-space-sm">
+          <div class="flex items-center gap-1 text-primary">
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          </div>
+          <p class="font-headline-sm text-[19px] text-on-surface italic font-normal leading-snug">
+            "Clinically, the pelvic synchronous incline prevents the evening lumbar fatigue common in creative workers."
+          </p>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            I routinely recommend Libson to clients suffering from chronic cervical spine strain. The thoracic angle adjustment is subtle and biomechanically flawless.
+          </p>
+        </div>
+        <div class="flex items-center gap-space-sm pt-space-xs">
+          <div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center font-bold text-on-surface-variant">JL</div>
+          <div class="flex flex-col">
+            <span class="font-label-md text-label-md text-on-surface">Dr. Johan Lindqvist</span>
+            <span class="font-body-sm text-[12px] text-on-surface-variant">Orthopedic Ergonomist, Stockholm</span>
+          </div>
+        </div>
+      </div>
+      <!-- Review 3 -->
+      <div class="bg-surface-container rounded-2xl p-8 shadow-sm flex flex-col justify-between gap-space-md">
+        <div class="flex flex-col gap-space-sm">
+          <div class="flex items-center gap-1 text-primary">
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          </div>
+          <p class="font-headline-sm text-[19px] text-on-surface italic font-normal leading-snug">
+            "The Klint lounge is where my best conceptual thinking happens. The oat bouclé is heavenly."
+          </p>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            It has transformed my reading corner. The tactile warmth of the hand-rubbed oil finish makes you want to touch every surface of the timber frame.
+          </p>
+        </div>
+        <div class="flex items-center gap-space-sm pt-space-xs">
+          <div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center font-bold text-on-surface-variant">EK</div>
+          <div class="flex flex-col">
+            <span class="font-label-md text-label-md text-on-surface">Elena Kroll</span>
+            <span class="font-body-sm text-[12px] text-on-surface-variant">Creative Director, Form Magazine</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: ATELIER JOURNAL & WORKSHOP VISIT BANNER -->
+<section class="w-full pb-space-2xl px-margin lg:px-margin-desktop" id="atelier">
+  <div class="max-w-7xl mx-auto rounded-3xl bg-surface-container-high overflow-hidden shadow-md grid grid-cols-1 lg:grid-cols-12">
+    <!-- Left Content (7 Cols) -->
+    <div class="lg:col-span-7 p-8 lg:p-14 flex flex-col justify-between gap-space-lg">
+      <div class="flex flex-col gap-space-sm">
+        <div class="flex items-center gap-space-sm">
+          <span class="material-symbols-outlined text-secondary text-[20px]">location_on</span>
+          <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Bredgade 28, København</span>
+        </div>
+        <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Experience the Ergonomic Trial in Person
+        </h2>
+        <p class="font-body-md text-body-md text-on-surface-variant max-w-lg leading-relaxed">
+          Our master cabinetmakers and posture consultants invite you to private 45-minute tactile fittings. Touch genuine leather swatches, test pressure-mapping pads, and drink pour-over coffee in our courtyard garden.
+        </p>
+      </div>
+      <div class="flex flex-wrap items-center gap-space-md">
+        <button class="bg-primary text-on-primary font-label-md text-label-md px-8 py-3.5 rounded-full hover:bg-primary-container shadow-md transition-all" data-book-trial type="button">
+          Schedule Studio Fitting
+        </button>
+        <a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors flex items-center gap-1 font-semibold" href="catalog.html">
+          Order Free Leather &amp; Wood Swatch Kit
+          <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+        </a>
+      </div>
+      <div class="flex items-center gap-space-lg pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+        <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">schedule</span> 100-Day In-Home Trial</span>
+        <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">handyman</span> Lifetime Joinery Guarantee</span>
+      </div>
+    </div>
+    <!-- Right Atelier Visual (5 Cols) -->
+    <div class="lg:col-span-5 relative min-h-[320px] lg:min-h-full">
+      <img alt="People experiencing ergonomic chairs in person at the Copenhagen atelier" class="w-full h-full object-cover" src="images/office-desk.jpg"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent lg:hidden"></div>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL: CONCIERGE APPOINTMENT -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm hidden" id="concierge-modal">
+  <div class="bg-surface rounded-3xl max-w-lg w-full p-8 shadow-2xl relative flex flex-col gap-space-md">
+    <button class="absolute top-6 right-6 text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('concierge-modal').classList.add('hidden')" type="button" aria-label="Close">
+      <span class="material-symbols-outlined text-[24px]">close</span>
+    </button>
+    <div class="flex flex-col gap-space-xs">
+      <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Bredgade Showroom</span>
+      <h3 class="font-headline-sm text-headline-sm text-on-surface">Reserve Your Atelier Fitting</h3>
+      <p class="font-body-sm text-body-sm text-on-surface-variant">
+        Complete individual spine mapping with our Copenhagen posture specialist.
+      </p>
+    </div>
+    <form class="flex flex-col gap-space-sm pt-2" onsubmit="event.preventDefault(); alert('Tusind tak! Your studio concierge has reserved your trial session.'); document.getElementById('concierge-modal').classList.add('hidden');">
+      <div class="flex flex-col gap-1">
+        <label class="font-label-sm text-label-sm text-on-surface uppercase" for="concierge-name">Full Name</label>
+        <input id="concierge-name" class="bg-surface-container px-4 py-2.5 rounded-xl font-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Freja Lindemann" required="" type="text"/>
+      </div>
+      <div class="flex flex-col gap-1">
+        <label class="font-label-sm text-label-sm text-on-surface uppercase" for="concierge-email">Email Address</label>
+        <input id="concierge-email" class="bg-surface-container px-4 py-2.5 rounded-xl font-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-primary" placeholder="freja@studio.dk" required="" type="email"/>
+      </div>
+      <div class="grid grid-cols-2 gap-space-sm">
+        <div class="flex flex-col gap-1">
+          <label class="font-label-sm text-label-sm text-on-surface uppercase" for="concierge-date">Preferred Date</label>
+          <input id="concierge-date" class="bg-surface-container px-3 py-2.5 rounded-xl font-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-primary" required="" type="date"/>
+        </div>
+        <div class="flex flex-col gap-1">
+          <label class="font-label-sm text-label-sm text-on-surface uppercase" for="concierge-silhouette">Primary Silhouette</label>
+          <select id="concierge-silhouette" class="bg-surface-container px-3 py-2.5 rounded-xl font-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-primary">
+            <option>No. 01 Executive Chair</option>
+            <option>Klint Lounge &amp; Ottoman</option>
+            <option>Nora Dining Armchair</option>
+            <option>All Silhouette Overview</option>
+          </select>
+        </div>
+      </div>
+      <button class="bg-primary text-on-primary font-label-md text-label-md py-3.5 rounded-full mt-3 hover:bg-primary-container transition-colors shadow-md font-semibold" type="submit">
+        Confirm Studio Appointment
+      </button>
+    </form>
+  </div>
+</div>
+
+</div>
+</main>
+
+<!-- Reusable footer -->
+<footer class="w-full bg-surface-container-low pt-space-2xl pb-space-xl text-on-surface">
+  <div class="w-full px-margin lg:px-margin-desktop">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter-desktop pb-space-xl">
+      <div class="lg:col-span-4 flex flex-col gap-space-md">
+        <div class="flex items-center gap-space-sm">
+          <div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-on-primary text-[22px]">chair</span>
+          </div>
+          <span class="font-headline-sm text-headline-sm text-on-surface">Libson Atelier</span>
+        </div>
+        <p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Handcrafted ergonomic seating engineered in Copenhagen. We harmonize ancestral Danish joinery with precision biomechanics to sustain creative focus and architectural posture.</p>
+        <div class="flex items-center gap-space-md pt-space-xs">
+          <div class="flex items-center gap-space-xs bg-secondary-container/40 px-3 py-1.5 rounded-full">
+            <span class="material-symbols-outlined text-secondary text-[16px]">eco</span>
+            <span class="font-label-sm text-label-sm text-on-secondary-fixed">FSC® Nordic Solid Oak</span>
+          </div>
+          <div class="flex items-center gap-space-xs bg-surface-container px-3 py-1.5 rounded-full">
+            <span class="material-symbols-outlined text-tertiary text-[16px]">verified_user</span>
+            <span class="font-label-sm text-label-sm text-on-surface">Ergonomic Biomechanics Tested</span>
+          </div>
+        </div>
+      </div>
+      <div class="lg:col-span-2 flex flex-col gap-space-md">
+        <h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Silhouettes</h3>
+        <ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+          <li><a class="hover:text-primary transition-colors" href="catalog.html">Executive Ergonomic</a></li>
+          <li><a class="hover:text-primary transition-colors" href="catalog.html">Lounge &amp; Recline</a></li>
+          <li><a class="hover:text-primary transition-colors" href="catalog.html">Architectural Dining</a></li>
+          <li><a class="hover:text-primary transition-colors" href="catalog.html">Stools &amp; Benches</a></li>
+          <li><a class="hover:text-primary transition-colors" href="catalog.html">Lumbar Task Seating</a></li>
+          <li><a class="hover:text-primary transition-colors" href="catalog.html">Archive Editions</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3 flex flex-col gap-space-md">
+        <h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Atelier Services</h3>
+        <ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+          <li><a class="hover:text-primary transition-colors" href="configurator.html">Bespoke Custom Upholstery</a></li>
+          <li><a class="hover:text-primary transition-colors" href="checkout.html">Trade &amp; Commercial Accounts</a></li>
+          <li><a class="hover:text-primary transition-colors" href="about.html">Ergonomics Fitting Consultation</a></li>
+          <li><a class="hover:text-primary transition-colors" href="about.html">Care &amp; Leather Longevity</a></li>
+          <li><a class="hover:text-primary transition-colors" href="checkout.html">White-Glove Delivery Protocol</a></li>
+          <li><a class="hover:text-primary transition-colors" href="checkout.html">100-Day In-Studio Trial</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3 flex flex-col gap-space-md">
+        <h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Newsletter &amp; Salon</h3>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">Receive seasonal upholstery swatches, private salon release invitations, and ergonomic white papers.</p>
+        <form class="flex flex-col gap-space-xs" onsubmit="event.preventDefault();">
+          <div class="flex items-center gap-space-xs">
+            <input class="flex-1 bg-surface px-space-md py-2.5 rounded-xl font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none shadow-[0_1px_4px_rgba(0,0,0,0.02)]" placeholder="atelier@residence.com" type="email"/>
+            <button class="bg-primary text-on-primary px-space-md py-2.5 rounded-xl font-label-md text-label-md hover:bg-primary-container transition-colors" type="submit">Join</button>
+          </div>
+          <span class="font-label-sm text-[10px] text-on-surface-variant/70">Discrete frequency. Unsubscribe anytime.</span>
+        </form>
+        <div class="pt-space-xs text-on-surface-variant">
+          <p class="font-body-sm text-body-sm font-medium text-on-surface">Atelier Showroom &amp; Archives</p>
+          <p class="font-body-sm text-body-sm">Bredgade 28, 1260 København, Denmark</p>
+          <p class="font-label-sm text-label-sm text-tertiary mt-space-xs">care@libson.et · +251 911 234 567</p>
+        </div>
+      </div>
+    </div>
+    <div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md">
+      <div class="flex items-center gap-space-sm text-on-surface-variant">
+        <span class="material-symbols-outlined text-secondary text-[18px]">nature</span>
+        <span class="font-label-sm text-label-sm">100% Carbon Neutral Craft &amp; Climate Compensated Delivery</span>
+      </div>
+      <div class="flex items-center gap-space-lg font-body-sm text-body-sm text-on-surface-variant">
+        <a class="hover:text-on-surface transition-colors" href="policy.html#privacy">Privacy Policy</a>
+        <a class="hover:text-on-surface transition-colors" href="policy.html#terms">Terms of Atelier</a>
+        <a class="hover:text-on-surface transition-colors" href="policy.html#warranty">Ergonomic Warranty (10 Yrs)</a>
+        <a class="hover:text-on-surface transition-colors" href="policy.html#accessibility">Accessibility</a>
+      </div>
+      <div class="font-body-sm text-body-sm text-on-surface-variant">© 2025 Libson Atelier Copenhagen. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Interactive visual micro-feedback for product swatches
+  function setSwatch(swatchId, imgId) {
+    const img = document.getElementById(imgId);
+    if (img) {
+      img.style.opacity = '0.6';
+      setTimeout(() => { img.style.opacity = '1'; }, 180);
+    }
+  }
+
+  // Active filter tab switcher micro-interaction
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.filter-btn').forEach(b => {
+        b.className = 'filter-btn bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm px-4 py-2 rounded-full transition-all';
+      });
+      this.className = 'filter-btn bg-on-surface text-surface font-label-sm text-label-sm px-4 py-2 rounded-full transition-all';
+    });
+  });
+</script>
+<script src="app.js" defer></script>
+</body>
 </html>

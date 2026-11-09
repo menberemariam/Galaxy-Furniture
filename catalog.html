@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-on-surface":"#f8efea","primary-container":"#b9583b","surface-dim":"#e1d8d3","tertiary":"#7a5421","on-secondary-fixed-variant":"#394b3d","on-secondary-fixed":"#0e1f13","surface-container-low":"#fbf2ed","surface-variant":"#eae1dc","on-primary-container":"#fffbff","on-error-container":"#93000a","tertiary-fixed-dim":"#f0bd80","on-tertiary-fixed":"#2a1700","on-surface-variant":"#56423d","on-secondary":"#ffffff","secondary":"#506354","on-background":"#1f1b18","error":"#ba1a1a","background":"#fff8f5","on-primary":"#ffffff","primary-fixed":"#ffdbd1","outline":"#89726c","inverse-primary":"#ffb59f","on-primary-fixed-variant":"#7d2c13","tertiary-container":"#966d37","surface-container-highest":"#eae1dc","primary-fixed-dim":"#ffb59f","primary":"#994126","on-secondary-container":"#546758","on-surface":"#1f1b18","secondary-container":"#d0e5d2","on-tertiary":"#ffffff","surface-container-high":"#f0e6e1","secondary-fixed-dim":"#b7ccb9","surface-bright":"#fff8f5","surface-container":"#f5ece7","tertiary-fixed":"#ffddb7","error-container":"#ffdad6","on-error":"#ffffff","inverse-surface":"#34302c","surface-tint":"#9c4328","secondary-fixed":"#d3e8d5","surface-container-lowest":"#ffffff","on-primary-fixed":"#3a0a00","on-tertiary-container":"#fffbff","surface":"#fff8f5","outline-variant":"#dcc1b9","on-tertiary-fixed-variant":"#62400d"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-lg":"1.75rem","gutter-desktop":"2.5rem","margin":"1.25rem","margin-desktop":"4rem","space-xs":"0.25rem","space-sm":"0.5rem","gutter":"1.5rem","space-xl":"3rem","space-md":"1rem","space-2xl":"5rem"},"fontFamily":{"label-sm":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-sm":["Playfair Display"],"headline-md":["Playfair Display"],"display-hero":["Playfair Display"],"body-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"spec-numeral":["Plus Jakarta Sans"],"headline-lg-mobile":["Playfair Display"],"headline-lg":["Playfair Display"],"display-hero-mobile":["Playfair Display"],"label-md":["Plus Jakarta Sans"]},"fontSize":{"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.08em","fontWeight":"700"}],"title-md":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"headline-sm":["22px",{"lineHeight":"30px","fontWeight":"600"}],"headline-md":["28px",{"lineHeight":"36px","fontWeight":"500"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"spec-numeral":["20px",{"lineHeight":"28px","letterSpacing":"-0.02em","fontWeight":"300"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.01em","fontWeight":"400"}],"display-hero-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.01em","fontWeight":"400"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.04em","fontWeight":"600"}]}}}}</script>
+<title>Libson Atelier — Full Catalog &amp; Filters</title>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased">
+
+<!-- Reusable header -->
+<header class="fixed top-0 left-0 right-0 z-50 w-full">
+  <div class="w-full bg-surface-container text-on-surface-variant py-2 px-margin lg:px-margin-desktop flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.02)]">
+    <div class="flex items-center gap-space-sm">
+      <span class="material-symbols-outlined text-secondary text-[16px]">award_star</span>
+      <p class="font-label-sm text-label-sm tracking-wider uppercase">Complimentary White-Glove In-Home Assembly on Orders Over ETB 180,000 · 100-Day Atelier Trial</p>
+    </div>
+    <div class="hidden md:flex items-center gap-space-md">
+      <span class="font-label-sm text-label-sm tracking-wider uppercase text-on-surface-variant/80">København Studio · CPH Mon-Fri 09-18</span>
+      <div class="h-3 w-px bg-outline-variant/60"></div>
+      <span class="font-label-sm text-label-sm text-on-surface flex items-center gap-space-xs cursor-pointer hover:text-primary transition-colors">
+        <span class="material-symbols-outlined text-[14px]">verified</span>Certified FSC® C108249
+      </span>
+    </div>
+  </div>
+  <div class="h-20 w-full bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="w-full h-full px-margin lg:px-margin-desktop flex items-center justify-between gap-space-md">
+      <div class="flex items-center gap-space-md flex-shrink-0">
+        <a href="index.html" class="flex items-center gap-space-md flex-shrink-0">
+          <div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-on-primary text-[22px]">chair</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-headline-sm text-headline-sm tracking-tight text-on-surface leading-none">Libson</span>
+            <span class="font-label-sm text-[10px] tracking-[0.2em] text-on-surface-variant uppercase mt-space-xs">Atelier København</span>
+          </div>
+        </a>
+      </div>
+      <nav class="hidden xl:flex items-center gap-space-lg">
+        <a class="font-label-md text-label-md tracking-wider text-on-surface-variant hover:text-on-surface transition-colors py-1" href="index.html">Storefront &amp; Collection</a>
+        <a class="font-label-md text-label-md tracking-wider text-primary font-semibold border-b border-primary py-1" href="catalog.html">Full Catalog &amp; Filters</a>
+        <a class="font-label-md text-label-md tracking-wider text-on-surface-variant hover:text-on-surface transition-colors py-1" href="configurator.html">Configurator &amp; Dossier</a>
+        <a class="font-label-md text-label-md tracking-wider text-on-surface-variant hover:text-on-surface transition-colors py-1" href="checkout.html">Ergonomic Trial &amp; Concierge</a>
+        <a class="font-label-md text-label-md tracking-wider text-on-surface-variant hover:text-on-surface transition-colors py-1" href="about.html">About Atelier</a>
+      </nav>
+      <div class="flex items-center gap-space-sm lg:gap-space-md">
+        <div class="hidden sm:flex items-center gap-space-xs bg-surface-container px-space-sm py-1.5 rounded-full text-on-surface-variant cursor-pointer hover:bg-surface-container-high transition-colors">
+          <span class="material-symbols-outlined text-[16px]">public</span>
+          <span class="font-label-sm text-label-sm uppercase text-on-surface">ETB</span>
+          <span class="material-symbols-outlined text-[14px]">expand_more</span>
+        </div>
+        <form class="relative hidden md:flex items-center" action="catalog.html" method="get" role="search" data-search-form>
+          <input class="w-48 lg:w-60 bg-surface-container-low pl-9 pr-3 py-1.5 rounded-full font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:bg-surface-container transition-all" name="q" placeholder="Search ergonomic silhouettes..." type="search" aria-label="Search chairs"/>
+          <span class="material-symbols-outlined absolute left-2.5 text-on-surface-variant text-[18px] pointer-events-none">search</span>
+        </form>
+        <a aria-label="Wishlist" class="relative p-2 text-on-surface-variant hover:text-on-surface transition-colors" href="wishlist.html">
+          <span class="material-symbols-outlined text-[22px]">favorite</span>
+          <span data-wishlist-count class="absolute top-1 right-1 h-4 w-4 bg-primary text-on-primary font-label-sm text-[10px] rounded-full flex items-center justify-center font-bold">3</span>
+        </a>
+        <a aria-label="Shopping Bag" class="flex items-center gap-space-xs bg-surface-container hover:bg-surface-container-high px-space-md py-2 rounded-full transition-all" href="cart.html">
+          <span class="material-symbols-outlined text-primary text-[20px]">shopping_bag</span>
+          <div class="flex flex-col text-left">
+            <span data-cart-total class="font-label-sm text-label-sm text-on-surface font-semibold">ETB 276,000</span>
+            <span data-cart-count class="font-label-sm text-[10px] text-on-surface-variant">2 items</span>
+          </div>
+        </a>
+        <a href="profile.html" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0" aria-label="Account">
+          <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="w-full pt-28 bg-surface">
+<div class="flex flex-col w-full">
+
+<!-- Top Ambient Glow -->
+<div class="relative w-full overflow-hidden">
+  <div class="absolute -top-32 left-1/3 w-[600px] h-[340px] bg-primary/5 rounded-full blur-3xl pointer-events-none -z-10"></div>
+  <div class="absolute top-10 right-10 w-[420px] h-[300px] bg-secondary/5 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+  <!-- Editorial Header Section -->
+  <section class="w-full px-margin lg:px-margin-desktop pt-8 pb-10">
+    <div class="flex flex-col gap-space-sm">
+      <!-- Breadcrumb & Stock Pill -->
+      <div class="flex flex-wrap items-center justify-between gap-space-sm pb-2">
+        <nav aria-label="Breadcrumb" class="flex items-center gap-2">
+          <a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant/70 hover:text-primary transition-colors" href="index.html">Home</a>
+          <span class="text-outline-variant font-label-sm text-[10px]">/</span>
+          <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">The Seating Collection</span>
+          <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-[10px] text-tertiary font-semibold ml-2">18 Exemplars</span>
+        </nav>
+        <div class="hidden md:flex items-center gap-3">
+          <span class="flex h-2 w-2 rounded-full bg-secondary"></span>
+          <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Copenhagen Kiln-Dried Timber Archive</span>
+        </div>
+      </div>
+
+      <!-- Headline & Bio Split Layout -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-baseline">
+        <div class="lg:col-span-8">
+          <p class="font-label-sm text-label-sm uppercase tracking-[0.25em] text-primary mb-2">Libson Form &amp; Spinal Orthopedics</p>
+          <h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight leading-tight">
+            Architectural Seating &amp; Ergonomic Catalog
+          </h1>
+        </div>
+        <div class="lg:col-span-4 flex flex-col justify-end">
+          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Every exemplar in our Copenhagen atelier is balanced between orthopedic spinal support and understated Nordic minimalism. Tested to withstand decades of sustained intellectual labor.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Category Pills + Sort/Layout Toolbar -->
+    <div class="mt-8 pt-6 flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+      <!-- Quick Filter Pills -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-2 lg:pb-0 scrollbar-none" id="categoryPillBar">
+        <button class="category-pill whitespace-nowrap px-4 py-2 rounded-full font-label-md text-label-md bg-on-surface text-surface transition-all shadow-sm" data-category="all" type="button">All Seating (18)</button>
+        <button class="category-pill whitespace-nowrap px-4 py-2 rounded-full font-label-md text-label-md bg-surface-container text-on-surface hover:bg-surface-container-high transition-all" data-category="task" type="button">Executive &amp; Task (6)</button>
+        <button class="category-pill whitespace-nowrap px-4 py-2 rounded-full font-label-md text-label-md bg-surface-container text-on-surface hover:bg-surface-container-high transition-all" data-category="lounge" type="button">Lounge &amp; Reading (5)</button>
+        <button class="category-pill whitespace-nowrap px-4 py-2 rounded-full font-label-md text-label-md bg-surface-container text-on-surface hover:bg-surface-container-high transition-all" data-category="dining" type="button">Dining &amp; Cafe (4)</button>
+        <button class="category-pill whitespace-nowrap px-4 py-2 rounded-full font-label-md text-label-md bg-surface-container text-on-surface hover:bg-surface-container-high transition-all" data-category="stools" type="button">Occasional &amp; Stools (3)</button>
+      </div>
+
+      <!-- Controls: View Mode & Sorting -->
+      <div class="flex items-center gap-space-sm self-end lg:self-center flex-shrink-0">
+        <!-- Mobile Filter Toggle Button -->
+        <button class="lg:hidden flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md shadow-sm" id="mobileFilterToggle" type="button">
+          <span class="material-symbols-outlined text-[18px]">tune</span>
+          Filters
+          <span class="w-5 h-5 rounded-full bg-primary text-on-primary text-[10px] flex items-center justify-center font-bold">4</span>
+        </button>
+        <!-- Grid Switcher -->
+        <div class="hidden sm:flex items-center bg-surface-container p-1 rounded-xl shadow-sm">
+          <button aria-label="3 Columns" class="p-1.5 rounded-lg bg-surface text-on-surface shadow-xs transition-colors" id="gridThreeBtn" title="3-Column Catalog View" type="button">
+            <span class="material-symbols-outlined text-[20px]">view_column</span>
+          </button>
+          <button aria-label="4 Columns" class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" id="gridFourBtn" title="4-Column Condensed View" type="button">
+            <span class="material-symbols-outlined text-[20px]">grid_view</span>
+          </button>
+        </div>
+        <!-- Sort Select Menu -->
+        <div class="relative inline-flex items-center">
+          <select class="appearance-none bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface font-label-md text-label-md pl-4 pr-9 py-2.5 rounded-xl cursor-pointer focus:outline-none shadow-sm" id="sortSelect">
+            <option value="curated">Curated Significance</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="ergo">Ergonomic Tier (Spinal Index)</option>
+          </select>
+          <span class="material-symbols-outlined absolute right-2.5 text-on-surface-variant text-[18px] pointer-events-none">expand_more</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Main Catalog Workspace: Left Faceted Rail + Product Matrix -->
+<section class="w-full px-margin lg:px-margin-desktop pb-24">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+
+    <!-- Faceted Filter Rail (Sticky Desktop) -->
+    <aside class="hidden lg:flex lg:col-span-3 flex-col gap-space-lg bg-surface-container-low p-6 rounded-2xl shadow-sm sticky top-32" id="filterRail">
+      <!-- Filter Header -->
+      <div class="flex items-center justify-between pb-3">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+          <span class="font-title-md text-title-md text-on-surface">Atelier Matrix</span>
+        </div>
+        <button class="font-label-sm text-label-sm text-primary hover:text-primary-container transition-colors uppercase tracking-wider underline" id="resetFilters" type="button">Reset (0)</button>
+      </div>
+      <!-- Facet 1: Timber Species -->
+      <div class="flex flex-col gap-3">
+        <div class="flex items-center justify-between">
+          <span class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Material &amp; Timber</span>
+          <span class="material-symbols-outlined text-[16px] text-on-surface-variant">unfold_less</span>
+        </div>
+        <div class="flex flex-col gap-2 font-body-sm text-body-sm">
+          <label class="flex items-center justify-between cursor-pointer group py-1">
+            <span class="flex items-center gap-2 text-on-surface group-hover:text-primary transition-colors">
+              <input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 bg-surface accent-primary" data-filter-group="material" data-filter-value="oak" type="checkbox"/> European White Oak
+            </span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant/80">12</span>
+          </label>
+          <label class="flex items-center justify-between cursor-pointer group py-1">
+            <span class="flex items-center gap-2 text-on-surface group-hover:text-primary transition-colors">
+              <input class="w-4 h-4 rounded text-primary focus:ring-0 bg-surface accent-primary" data-filter-group="material" data-filter-value="smoked" type="checkbox"/> Smoked Dark Oak
+            </span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant/80">8</span>
+          </label>
+          <label class="flex items-center justify-between cursor-pointer group py-1">
+            <span class="flex items-center gap-2 text-on-surface group-hover:text-primary transition-colors">
+              <input class="w-4 h-4 rounded text-primary focus:ring-0 bg-surface accent-primary" data-filter-group="material" data-filter-value="walnut" type="checkbox"/> American Walnut
+            </span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant/80">6</span>
+          </label>
+          <label class="flex items-center justify-between cursor-pointer group py-1">
+            <span class="flex items-center gap-2 text-on-surface group-hover:text-primary transition-colors">
+              <input class="w-4 h-4 rounded text-primary focus:ring-0 bg-surface accent-primary" data-filter-group="material" data-filter-value="aluminum" type="checkbox"/> Cast Brushed Aluminum
+            </span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant/80">5</span>
+          </label>
+        </div>
+      </div>
+      <!-- Facet 2: Upholstery & Tactility -->
+      <div class="flex flex-col gap-3">
+        <div class="flex items-center justify-between">
+          <span class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Upholstery Tactility</span>
+          <span class="font-label-sm text-label-sm text-secondary font-semibold">Tannery Certified</span>
+        </div>
+        <div class="flex flex-wrap gap-2 pt-1">
+          <button class="swatch-btn p-1.5 rounded-full bg-surface-container-high hover:scale-105 transition-transform flex items-center gap-1.5 pr-3 shadow-xs" title="Cognac Saddle Leather" type="button">
+            <span class="w-4 h-4 rounded-full bg-[#8c482c] inline-block shadow-inner"></span>
+            <span class="font-label-sm text-[11px] text-on-surface">Cognac Hide</span>
+          </button>
+          <button class="swatch-btn p-1.5 rounded-full bg-surface-container-high hover:scale-105 transition-transform flex items-center gap-1.5 pr-3 shadow-xs" title="Obsidian Aniline Leather" type="button">
+            <span class="w-4 h-4 rounded-full bg-[#24201d] inline-block shadow-inner"></span>
+            <span class="font-label-sm text-[11px] text-on-surface">Obsidian Leather</span>
+          </button>
+          <button class="swatch-btn p-1.5 rounded-full bg-surface-container-high hover:scale-105 transition-transform flex items-center gap-1.5 pr-3 shadow-xs" title="Sand Wool Bouclé" type="button">
+            <span class="w-4 h-4 rounded-full bg-[#dfd6cb] inline-block shadow-inner"></span>
+            <span class="font-label-sm text-[11px] text-on-surface">Sand Bouclé</span>
+          </button>
+          <button class="swatch-btn p-1.5 rounded-full bg-surface-container-high hover:scale-105 transition-transform flex items-center gap-1.5 pr-3 shadow-xs" title="Nordic Linen Blend" type="button">
+            <span class="w-4 h-4 rounded-full bg-[#c5baa9] inline-block shadow-inner"></span>
+            <span class="font-label-sm text-[11px] text-on-surface">Nordic Linen</span>
+          </button>
+          <button class="swatch-btn p-1.5 rounded-full bg-surface-container-high hover:scale-105 transition-transform flex items-center gap-1.5 pr-3 shadow-xs" title="Forest Olive Mohair" type="button">
+            <span class="w-4 h-4 rounded-full bg-[#465342] inline-block shadow-inner"></span>
+            <span class="font-label-sm text-[11px] text-on-surface">Olive Mohair</span>
+          </button>
+        </div>
+      </div>
+      <!-- Facet 3: Ergonomic Biomechanics -->
+      <div class="flex flex-col gap-3">
+        <div class="flex items-center justify-between">
+          <span class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Orthopedic Mechanics</span>
+          <span class="material-symbols-outlined text-[16px] text-on-surface-variant">health_and_safety</span>
+        </div>
+        <div class="flex flex-col gap-2 font-body-sm text-body-sm">
+          <label class="flex items-center gap-2 cursor-pointer group py-0.5">
+            <input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 bg-surface accent-primary" type="checkbox"/>
+            <span class="text-on-surface group-hover:text-primary transition-colors">Lumbar Depth Dynamic Dial</span>
+          </label>
+          <label class="flex items-center gap-2 cursor-pointer group py-0.5">
+            <input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 bg-surface accent-primary" type="checkbox"/>
+            <span class="text-on-surface group-hover:text-primary transition-colors">4D Articulating Armrests</span>
+          </label>
+          <label class="flex items-center gap-2 cursor-pointer group py-0.5">
+            <input class="w-4 h-4 rounded text-primary focus:ring-0 bg-surface accent-primary" type="checkbox"/>
+            <span class="text-on-surface group-hover:text-primary transition-colors">Synchro-Tilt 135° Recline</span>
+          </label>
+          <label class="flex items-center gap-2 cursor-pointer group py-0.5">
+            <input class="w-4 h-4 rounded text-primary focus:ring-0 bg-surface accent-primary" type="checkbox"/>
+            <span class="text-on-surface group-hover:text-primary transition-colors">Waterfall Popliteal Seat Edge</span>
+          </label>
+          <label class="flex items-center gap-2 cursor-pointer group py-0.5">
+            <input class="w-4 h-4 rounded text-primary focus:ring-0 bg-surface accent-primary" type="checkbox"/>
+            <span class="text-on-surface group-hover:text-primary transition-colors">Dual-Axis Pelvic Cradle</span>
+          </label>
+        </div>
+      </div>
+      <!-- Facet 4: Price Spectrum Slider -->
+      <div class="flex flex-col gap-3">
+        <div class="flex items-center justify-between">
+          <span class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Investment Spectrum</span>
+          <span class="font-label-sm text-label-sm text-primary font-bold" id="priceDisplayValue">ETB 52,500 – ETB 330,000</span>
+        </div>
+        <input class="w-full h-1.5 bg-surface-variant rounded-lg appearance-none cursor-pointer accent-primary" id="priceRange" min="51000" max="330000" step="7500" type="range" value="277500"/>
+        <div class="flex items-center justify-between font-label-sm text-[11px] text-on-surface-variant">
+          <span>ETB 51,000 (Stools)</span>
+          <span>ETB 330,000 (Executive Lounge)</span>
+        </div>
+      </div>
+      <!-- Facet 5: Delivery & Craft Cadence -->
+      <div class="flex flex-col gap-2">
+        <span class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Lead Time &amp; Dispatch</span>
+        <div class="grid grid-cols-2 gap-2 pt-1">
+          <button class="lead-btn active p-2.5 rounded-xl bg-surface-container text-left hover:bg-surface-container-high transition-all shadow-xs" type="button">
+            <span class="block font-label-sm text-label-sm text-secondary font-bold">48 Hours</span>
+            <span class="block font-body-sm text-[12px] text-on-surface-variant leading-tight">Ready to Ship</span>
+          </button>
+          <button class="lead-btn p-2.5 rounded-xl bg-surface-container text-left hover:bg-surface-container-high transition-all shadow-xs" type="button">
+            <span class="block font-label-sm text-label-sm text-tertiary font-bold">2–4 Weeks</span>
+            <span class="block font-body-sm text-[12px] text-on-surface-variant leading-tight">Bespoke Joinery</span>
+          </button>
+        </div>
+      </div>
+      <!-- Trust Mini-Card -->
+      <div class="bg-secondary-container/30 p-4 rounded-xl flex items-start gap-3">
+        <span class="material-symbols-outlined text-secondary text-[22px] flex-shrink-0">workspace_premium</span>
+        <div class="flex flex-col">
+          <span class="font-label-md text-label-md text-on-secondary-fixed font-semibold">10-Year Frame Covenant</span>
+          <span class="font-body-sm text-[12px] text-on-secondary-fixed-variant leading-normal">Solid mortise-and-tenon craftsmanship backed by direct Copenhagen workshop repair coverage.</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Product Showcase Matrix (Right 9 Columns) -->
+    <div class="lg:col-span-9 flex flex-col gap-space-lg">
+      <!-- Active Filter Echo Bar & Results Counter -->
+      <div class="flex flex-wrap items-center justify-between gap-3 bg-surface-container p-4 rounded-2xl shadow-sm">
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mr-1">Active Criteria:</span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface text-on-surface font-label-sm text-label-sm shadow-xs">
+            White Oak
+            <button class="text-on-surface-variant hover:text-primary transition-colors text-[14px]" type="button" aria-label="Remove filter">×</button>
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface text-on-surface font-label-sm text-label-sm shadow-xs">
+            Dynamic Lumbar
+            <button class="text-on-surface-variant hover:text-primary transition-colors text-[14px]" type="button" aria-label="Remove filter">×</button>
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface text-on-surface font-label-sm text-label-sm shadow-xs">
+            Under ETB 277,500
+            <button class="text-on-surface-variant hover:text-primary transition-colors text-[14px]" type="button" aria-label="Remove filter">×</button>
+          </span>
+        </div>
+        <span class="font-label-sm text-label-sm text-on-surface-variant">
+          Displaying <strong data-results-count class="text-on-surface font-semibold">6</strong> of 18 atelier designs
+        </span>
+      </div>
+
+      <!-- Catalog Product Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-gutter" id="productCatalogGrid">
+        <!-- Product Card 1: Libson No. 01 Executive Chair -->
+        <article class="group product-card flex flex-col bg-surface-container-low rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+          <div class="relative w-full aspect-[4/3] bg-surface-container overflow-hidden">
+            <img alt="Libson No. 01 Executive ergonomic chair in pale oiled oak and cognac leather" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/office-chair.jpg"/>
+            <div class="absolute top-3 left-3 flex flex-col gap-1.5">
+              <span class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-[10px] tracking-wider uppercase font-bold shadow-xs">Ergonomic Benchmark</span>
+              <span class="px-2 py-0.5 rounded-full bg-surface/90 backdrop-blur-md text-on-surface font-label-sm text-[10px] font-medium">Spine Index 9.9</span>
+            </div>
+            <button aria-label="Add to Curated Collection" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/80 backdrop-blur-sm text-on-surface-variant hover:text-primary flex items-center justify-center transition-colors shadow-xs" type="button">
+              <span class="material-symbols-outlined text-[18px]">favorite</span>
+            </button>
+          </div>
+          <div class="p-5 flex flex-col flex-1 justify-between gap-4">
+            <div>
+              <div class="flex items-baseline justify-between gap-2 mb-1">
+                <h3 class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Libson No. 01 Executive</h3>
+                <span class="font-spec-numeral text-spec-numeral text-primary font-semibold">ETB 177,000</span>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                Synchronous multi-pivot mechanical base calibrated for 12+ hours of posture alignment. Solid carved Danish oak spine.
+              </p>
+            </div>
+            <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-[11px] bg-surface-container px-3 py-2 rounded-xl">
+              <span class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-secondary text-[16px]">airline_seat_recline_extra</span> 4D Lumbar Pivot
+              </span>
+              <span class="flex items-center gap-1 text-on-surface">
+                <span class="material-symbols-outlined text-tertiary text-[14px]">star</span> 4.9 (42 Reviews)
+              </span>
+            </div>
+            <div class="flex items-center justify-between pt-1">
+              <div class="flex items-center gap-1.5">
+                <button class="w-5 h-5 rounded-full bg-[#8c482c] ring-2 ring-primary ring-offset-2 ring-offset-surface-container-low transition-all" title="Cognac Saddle" type="button" aria-label="Cognac Saddle"></button>
+                <button class="w-5 h-5 rounded-full bg-[#24201d] hover:scale-110 transition-transform" title="Obsidian Black" type="button" aria-label="Obsidian Black"></button>
+                <button class="w-5 h-5 rounded-full bg-[#dfd6cb] hover:scale-110 transition-transform" title="Sand Wool" type="button" aria-label="Sand Wool"></button>
+              </div>
+              <a class="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-on-surface text-surface hover:bg-primary transition-colors font-label-md text-label-md" href="configurator.html">
+                Configure <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card 2: Klint Reclining Lounge & Ottoman -->
+        <article class="group product-card flex flex-col bg-surface-container-low rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+          <div class="relative w-full aspect-[4/3] bg-surface-container overflow-hidden">
+            <img alt="Klint reclining lounge armchair with matching ottoman in tan saddle leather and smoked oak" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/brown-lounge.jpg"/>
+            <div class="absolute top-3 left-3 flex flex-col gap-1.5">
+              <span class="px-2.5 py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-[10px] tracking-wider uppercase font-bold shadow-xs">Hand-Stitched Saddle Hide</span>
+              <span class="px-2 py-0.5 rounded-full bg-surface/90 backdrop-blur-md text-on-surface font-label-sm text-[10px] font-medium">135° Recline Lock</span>
+            </div>
+            <button aria-label="Add to Curated Collection" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/80 backdrop-blur-sm text-on-surface-variant hover:text-primary flex items-center justify-center transition-colors shadow-xs" type="button">
+              <span class="material-symbols-outlined text-[18px]">favorite</span>
+            </button>
+          </div>
+          <div class="p-5 flex flex-col flex-1 justify-between gap-4">
+            <div>
+              <div class="flex items-baseline justify-between gap-2 mb-1">
+                <h3 class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Klint Recline &amp; Ottoman</h3>
+                <span class="font-spec-numeral text-spec-numeral text-primary font-semibold">ETB 217,500</span>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                Zero-pressure reading angle accompanied by an orthopedic lumbar bowl and paired curved birch ottoman.
+              </p>
+            </div>
+            <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-[11px] bg-surface-container px-3 py-2 rounded-xl">
+              <span class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-secondary text-[16px]">chair</span> Full Calf Support
+              </span>
+              <span class="flex items-center gap-1 text-on-surface">
+                <span class="material-symbols-outlined text-tertiary text-[14px]">star</span> 5.0 (28 Reviews)
+              </span>
+            </div>
+            <div class="flex items-center justify-between pt-1">
+              <div class="flex items-center gap-1.5">
+                <button class="w-5 h-5 rounded-full bg-[#8c482c] ring-2 ring-primary ring-offset-2 ring-offset-surface-container-low transition-all" title="Cognac Leather" type="button" aria-label="Cognac Leather"></button>
+                <button class="w-5 h-5 rounded-full bg-[#465342] hover:scale-110 transition-transform" title="Forest Olive Mohair" type="button" aria-label="Forest Olive Mohair"></button>
+              </div>
+              <a class="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-on-surface text-surface hover:bg-primary transition-colors font-label-md text-label-md" href="configurator.html">
+                Configure <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card 3: Nora Sculptural Dining Chair -->
+        <article class="group product-card flex flex-col bg-surface-container-low rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+          <div class="relative w-full aspect-[4/3] bg-surface-container overflow-hidden">
+            <img alt="Nora sculptural dining chair in steam-bent solid oak with oat linen seat pad" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/dining-chairs.jpg"/>
+            <div class="absolute top-3 left-3 flex flex-col gap-1.5">
+              <span class="px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-[10px] tracking-wider uppercase font-bold shadow-xs">Steam-Bent Solid Oak</span>
+              <span class="px-2 py-0.5 rounded-full bg-surface/90 backdrop-blur-md text-on-surface font-label-sm text-[10px] font-medium">Stackable (4)</span>
+            </div>
+            <button aria-label="Add to Curated Collection" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/80 backdrop-blur-sm text-on-surface-variant hover:text-primary flex items-center justify-center transition-colors shadow-xs" type="button">
+              <span class="material-symbols-outlined text-[18px]">favorite</span>
+            </button>
+          </div>
+          <div class="p-5 flex flex-col flex-1 justify-between gap-4">
+            <div>
+              <div class="flex items-baseline justify-between gap-2 mb-1">
+                <h3 class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Nora Sculptural Dining</h3>
+                <span class="font-spec-numeral text-spec-numeral text-primary font-semibold">ETB 73,500</span>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                Seamless continuous curve backrest cradling the thoracic cage for elongated salon dinners and intimate conferences.
+              </p>
+            </div>
+            <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-[11px] bg-surface-container px-3 py-2 rounded-xl">
+              <span class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-secondary text-[16px]">accessibility</span> Thoracic Rest Curve
+              </span>
+              <span class="flex items-center gap-1 text-on-surface">
+                <span class="material-symbols-outlined text-tertiary text-[14px]">star</span> 4.8 (64 Reviews)
+              </span>
+            </div>
+            <div class="flex items-center justify-between pt-1">
+              <div class="flex items-center gap-1.5">
+                <button class="w-5 h-5 rounded-full bg-[#dfd6cb] ring-2 ring-primary ring-offset-2 ring-offset-surface-container-low transition-all" title="Sand Oat" type="button" aria-label="Sand Oat"></button>
+                <button class="w-5 h-5 rounded-full bg-[#8c482c] hover:scale-110 transition-transform" title="Cognac Leather" type="button" aria-label="Cognac Leather"></button>
+                <button class="w-5 h-5 rounded-full bg-[#24201d] hover:scale-110 transition-transform" title="Smoked Carbon" type="button" aria-label="Smoked Carbon"></button>
+              </div>
+              <a class="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-on-surface text-surface hover:bg-primary transition-colors font-label-md text-label-md" href="configurator.html">
+                Configure <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card 4: Arv Task Swivel Chair -->
+        <article class="group product-card flex flex-col bg-surface-container-low rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+          <div class="relative w-full aspect-[4/3] bg-surface-container overflow-hidden">
+            <img alt="Arv task swivel chair with 3D wool knit back and cast aluminum base in cream and sage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/office-desk.jpg"/>
+            <div class="absolute top-3 left-3 flex flex-col gap-1.5">
+              <span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px] tracking-wider uppercase font-bold shadow-xs">3D Wool Knit &amp; Core</span>
+              <span class="px-2 py-0.5 rounded-full bg-surface/90 backdrop-blur-md text-on-surface font-label-sm text-[10px] font-medium">BIFMA / ISO 9241</span>
+            </div>
+            <button aria-label="Add to Curated Collection" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/80 backdrop-blur-sm text-on-surface-variant hover:text-primary flex items-center justify-center transition-colors shadow-xs" type="button">
+              <span class="material-symbols-outlined text-[18px]">favorite</span>
+            </button>
+          </div>
+          <div class="p-5 flex flex-col flex-1 justify-between gap-4">
+            <div>
+              <div class="flex items-baseline justify-between gap-2 mb-1">
+                <h3 class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Arv Task Swivel Chair</h3>
+                <span class="font-spec-numeral text-spec-numeral text-primary font-semibold">ETB 129,000</span>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                Active weight-activated resistance cylinder with tensioned wool knit that breathes naturally throughout seasonal shifts.
+              </p>
+            </div>
+            <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-[11px] bg-surface-container px-3 py-2 rounded-xl">
+              <span class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-secondary text-[16px]">sync_alt</span> Adaptive Tilt Mechanism
+              </span>
+              <span class="flex items-center gap-1 text-on-surface">
+                <span class="material-symbols-outlined text-tertiary text-[14px]">star</span> 4.9 (51 Reviews)
+              </span>
+            </div>
+            <div class="flex items-center justify-between pt-1">
+              <div class="flex items-center gap-1.5">
+                <button class="w-5 h-5 rounded-full bg-[#465342] ring-2 ring-primary ring-offset-2 ring-offset-surface-container-low transition-all" title="Sage Green Knit" type="button" aria-label="Sage Green Knit"></button>
+                <button class="w-5 h-5 rounded-full bg-[#dfd6cb] hover:scale-110 transition-transform" title="Sand Oat Knit" type="button" aria-label="Sand Oat Knit"></button>
+                <button class="w-5 h-5 rounded-full bg-[#24201d] hover:scale-110 transition-transform" title="Charcoal Knit" type="button" aria-label="Charcoal Knit"></button>
+              </div>
+              <a class="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-on-surface text-surface hover:bg-primary transition-colors font-label-md text-label-md" href="configurator.html">
+                Configure <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card 5: Freja Low Slung Reading Chair -->
+        <article class="group product-card flex flex-col bg-surface-container-low rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+          <div class="relative w-full aspect-[4/3] bg-surface-container overflow-hidden">
+            <img alt="Freja low slung reading chair in Belgian linen with brushed brass joints and walnut base" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/armchair-window.jpg"/>
+            <div class="absolute top-3 left-3 flex flex-col gap-1.5">
+              <span class="px-2.5 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-[10px] tracking-wider uppercase font-bold shadow-xs">Belgian Linen &amp; Brass</span>
+              <span class="px-2 py-0.5 rounded-full bg-surface/90 backdrop-blur-md text-on-surface font-label-sm text-[10px] font-medium">Sacral Cradle</span>
+            </div>
+            <button aria-label="Add to Curated Collection" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/80 backdrop-blur-sm text-on-surface-variant hover:text-primary flex items-center justify-center transition-colors shadow-xs" type="button">
+              <span class="material-symbols-outlined text-[18px]">favorite</span>
+            </button>
+          </div>
+          <div class="p-5 flex flex-col flex-1 justify-between gap-4">
+            <div>
+              <div class="flex items-baseline justify-between gap-2 mb-1">
+                <h3 class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Freja Low Slung Chair</h3>
+                <span class="font-spec-numeral text-spec-numeral text-primary font-semibold">ETB 147,000</span>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                Engineered with an inclined pelvic pocket that gently rotates the hips, releasing pressure on lumbar discs L4 and L5.
+              </p>
+            </div>
+            <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-[11px] bg-surface-container px-3 py-2 rounded-xl">
+              <span class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-secondary text-[16px]">nature_people</span> Zero-Shear Angle
+              </span>
+              <span class="flex items-center gap-1 text-on-surface">
+                <span class="material-symbols-outlined text-tertiary text-[14px]">star</span> 4.7 (19 Reviews)
+              </span>
+            </div>
+            <div class="flex items-center justify-between pt-1">
+              <div class="flex items-center gap-1.5">
+                <button class="w-5 h-5 rounded-full bg-[#c5baa9] ring-2 ring-primary ring-offset-2 ring-offset-surface-container-low transition-all" title="Nordic Raw Flax" type="button" aria-label="Nordic Raw Flax"></button>
+                <button class="w-5 h-5 rounded-full bg-[#8c482c] hover:scale-110 transition-transform" title="Saddle Cognac" type="button" aria-label="Saddle Cognac"></button>
+              </div>
+              <a class="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-on-surface text-surface hover:bg-primary transition-colors font-label-md text-label-md" href="configurator.html">
+                Configure <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card 6: Malm Architectural Stool -->
+        <article class="group product-card flex flex-col bg-surface-container-low rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+          <div class="relative w-full aspect-[4/3] bg-surface-container overflow-hidden">
+            <img alt="Malm architectural counter stool in solid white oak with saddle sculpted wood seat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/wooden-stool.jpg"/>
+            <div class="absolute top-3 left-3 flex flex-col gap-1.5">
+              <span class="px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-[10px] tracking-wider uppercase font-bold shadow-xs">Sculpted Saddle Contour</span>
+              <span class="px-2 py-0.5 rounded-full bg-surface/90 backdrop-blur-md text-on-surface font-label-sm text-[10px] font-medium">Counter &amp; Bar Ht</span>
+            </div>
+            <button aria-label="Add to Curated Collection" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/80 backdrop-blur-sm text-on-surface-variant hover:text-primary flex items-center justify-center transition-colors shadow-xs" type="button">
+              <span class="material-symbols-outlined text-[18px]">favorite</span>
+            </button>
+          </div>
+          <div class="p-5 flex flex-col flex-1 justify-between gap-4">
+            <div>
+              <div class="flex items-baseline justify-between gap-2 mb-1">
+                <h3 class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Malm Architectural Stool</h3>
+                <span class="font-spec-numeral text-spec-numeral text-primary font-semibold">ETB 51,000</span>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                CNC sculpted saddle hollowed from a single plank of European white oak with angled tripod stabilization geometry.
+              </p>
+            </div>
+            <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-[11px] bg-surface-container px-3 py-2 rounded-xl">
+              <span class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-secondary text-[16px]">chair_alt</span> Ischial Relief Contour
+              </span>
+              <span class="flex items-center gap-1 text-on-surface">
+                <span class="material-symbols-outlined text-tertiary text-[14px]">star</span> 4.9 (33 Reviews)
+              </span>
+            </div>
+            <div class="flex items-center justify-between pt-1">
+              <div class="flex items-center gap-1.5">
+                <button class="w-5 h-5 rounded-full bg-[#dfd6cb] ring-2 ring-primary ring-offset-2 ring-offset-surface-container-low transition-all" title="Natural White Oak" type="button" aria-label="Natural White Oak"></button>
+                <button class="w-5 h-5 rounded-full bg-[#56423d] hover:scale-110 transition-transform" title="Smoked Oak" type="button" aria-label="Smoked Oak"></button>
+                <button class="w-5 h-5 rounded-full bg-[#24201d] hover:scale-110 transition-transform" title="Ebonized Ash" type="button" aria-label="Ebonized Ash"></button>
+              </div>
+              <a class="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-on-surface text-surface hover:bg-primary transition-colors font-label-md text-label-md" href="configurator.html">
+                Configure <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Catalog Pagination & Stock Assurance -->
+      <div class="mt-8 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 bg-surface-container-low p-6 rounded-2xl shadow-sm">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-secondary text-[20px]">local_shipping</span>
+          <span class="font-body-sm text-body-sm text-on-surface-variant">
+            Every chair undergoes 18-point biomechanic and joinery inspection before dispatch.
+          </span>
+        </div>
+        <div class="flex items-center gap-2">
+          <button class="w-10 h-10 rounded-xl bg-surface-container text-on-surface-variant flex items-center justify-center hover:bg-surface-container-high transition-colors disabled:opacity-40" disabled="" type="button" aria-label="Previous page">
+            <span class="material-symbols-outlined text-[20px]">chevron_left</span>
+          </button>
+          <button class="w-10 h-10 rounded-xl bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center shadow-xs" type="button">1</button>
+          <button class="w-10 h-10 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center hover:bg-surface-container-high transition-colors" type="button">2</button>
+          <button class="w-10 h-10 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center hover:bg-surface-container-high transition-colors" type="button">3</button>
+          <button class="w-10 h-10 rounded-xl bg-surface-container text-on-surface-variant flex items-center justify-center hover:bg-surface-container-high transition-colors" type="button" aria-label="Next page">
+            <span class="material-symbols-outlined text-[20px]">chevron_right</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bottom Ergonomic Guidance & Concierge Banner -->
+<section class="w-full bg-surface-container-high py-16 px-margin lg:px-margin-desktop relative overflow-hidden">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+    <!-- Text & Prompt -->
+    <div class="lg:col-span-8 flex flex-col gap-space-sm">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container/60 w-fit">
+        <span class="material-symbols-outlined text-secondary text-[16px]">accessibility_new</span>
+        <span class="font-label-sm text-label-sm text-on-secondary-fixed uppercase tracking-wider font-semibold">Concierge Diagnostic</span>
+      </div>
+      <h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">
+        Uncertain which silhouette matches your lumbar profile?
+      </h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+        Take our 60-second Ergonomic Fit Assessment or book a video evaluation with our Copenhagen physical therapy &amp; furniture master team.
+      </p>
+      <div class="flex flex-wrap items-center gap-space-md pt-2">
+        <button class="px-6 py-3.5 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md tracking-wider uppercase transition-all shadow-sm flex items-center gap-2" type="button" onclick="window.location.href='index.html#concierge-modal'">
+          <span class="material-symbols-outlined text-[20px]">tune</span> Start 60-Second Fit Matrix
+        </button>
+        <button class="px-6 py-3.5 rounded-full bg-surface hover:bg-surface-container-lowest text-on-surface font-label-md text-label-md tracking-wider transition-all shadow-xs flex items-center gap-2" type="button" onclick="window.location.href='checkout.html'">
+          <span class="material-symbols-outlined text-secondary text-[20px]">chat</span> Live Studio Concierge (CPH)
+        </button>
+      </div>
+    </div>
+    <!-- Quick Biomechanics Metric Visual Plate -->
+    <div class="lg:col-span-4 bg-surface p-6 rounded-2xl shadow-sm flex flex-col gap-4">
+      <div class="flex items-center justify-between pb-2">
+        <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Spinal Pressure Index</span>
+        <span class="font-label-sm text-label-sm text-secondary font-bold">-38% vs Industry Standard</span>
+      </div>
+      <div class="w-full bg-surface-container rounded-xl p-3 flex flex-col gap-2">
+        <div class="flex items-center justify-between font-label-sm text-[11px] text-on-surface">
+          <span>Cervical Support (C1-C7)</span>
+          <span class="font-semibold text-primary">98% Neutral</span>
+        </div>
+        <div class="w-full h-1.5 bg-surface-variant rounded-full overflow-hidden">
+          <div class="h-full bg-primary rounded-full" style="width: 98%;"></div>
+        </div>
+        <div class="flex items-center justify-between font-label-sm text-[11px] text-on-surface pt-1">
+          <span>Lumbar Disc Relief (L1-L5)</span>
+          <span class="font-semibold text-secondary">94% Zero-Strain</span>
+        </div>
+        <div class="w-full h-1.5 bg-surface-variant rounded-full overflow-hidden">
+          <div class="h-full bg-secondary rounded-full" style="width: 94%;"></div>
+        </div>
+      </div>
+      <p class="font-body-sm text-[12px] text-on-surface-variant leading-snug">
+        Clinical trials conducted in collaboration with the Copenhagen Institute of Biomechanics (2024).
+      </p>
+    </div>
+  </div>
+</section>
+
+</div>
+</main>
+
+<!-- Reusable footer -->
+<footer class="w-full bg-surface-container-low pt-space-2xl pb-space-xl text-on-surface">
+  <div class="w-full px-margin lg:px-margin-desktop">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter-desktop pb-space-xl">
+      <div class="lg:col-span-4 flex flex-col gap-space-md">
+        <div class="flex items-center gap-space-sm">
+          <div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-on-primary text-[22px]">chair</span>
+          </div>
+          <span class="font-headline-sm text-headline-sm text-on-surface">Libson Atelier</span>
+        </div>
+        <p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Handcrafted ergonomic seating engineered in Copenhagen. We harmonize ancestral Danish joinery with precision biomechanics to sustain creative focus and architectural posture.</p>
+        <div class="flex items-center gap-space-md pt-space-xs">
+          <div class="flex items-center gap-space-xs bg-secondary-container/40 px-3 py-1.5 rounded-full">
+            <span class="material-symbols-outlined text-secondary text-[16px]">eco</span>
+            <span class="font-label-sm text-label-sm text-on-secondary-fixed">FSC® Nordic Solid Oak</span>
+          </div>
+          <div class="flex items-center gap-space-xs bg-surface-container px-3 py-1.5 rounded-full">
+            <span class="material-symbols-outlined text-tertiary text-[16px]">verified_user</span>
+            <span class="font-label-sm text-label-sm text-on-surface">Ergonomic Biomechanics Tested</span>
+          </div>
+        </div>
+      </div>
+      <div class="lg:col-span-2 flex flex-col gap-space-md">
+        <h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Silhouettes</h3>
+        <ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+          <li><a class="hover:text-primary transition-colors" href="catalog.html">Executive Ergonomic</a></li>
+          <li><a class="hover:text-primary transition-colors" href="catalog.html">Lounge &amp; Recline</a></li>
+          <li><a class="hover:text-primary transition-colors" href="catalog.html">Architectural Dining</a></li>
+          <li><a class="hover:text-primary transition-colors" href="catalog.html">Stools &amp; Benches</a></li>
+          <li><a class="hover:text-primary transition-colors" href="catalog.html">Lumbar Task Seating</a></li>
+          <li><a class="hover:text-primary transition-colors" href="catalog.html">Archive Editions</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3 flex flex-col gap-space-md">
+        <h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Atelier Services</h3>
+        <ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+          <li><a class="hover:text-primary transition-colors" href="configurator.html">Bespoke Custom Upholstery</a></li>
+          <li><a class="hover:text-primary transition-colors" href="checkout.html">Trade &amp; Commercial Accounts</a></li>
+          <li><a class="hover:text-primary transition-colors" href="about.html">Ergonomics Fitting Consultation</a></li>
+          <li><a class="hover:text-primary transition-colors" href="about.html">Care &amp; Leather Longevity</a></li>
+          <li><a class="hover:text-primary transition-colors" href="checkout.html">White-Glove Delivery Protocol</a></li>
+          <li><a class="hover:text-primary transition-colors" href="checkout.html">100-Day In-Studio Trial</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3 flex flex-col gap-space-md">
+        <h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Newsletter &amp; Salon</h3>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">Receive seasonal upholstery swatches, private salon release invitations, and ergonomic white papers.</p>
+        <form class="flex flex-col gap-space-xs" onsubmit="event.preventDefault();">
+          <div class="flex items-center gap-space-xs">
+            <input class="flex-1 bg-surface px-space-md py-2.5 rounded-xl font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none shadow-[0_1px_4px_rgba(0,0,0,0.02)]" placeholder="atelier@residence.com" type="email"/>
+            <button class="bg-primary text-on-primary px-space-md py-2.5 rounded-xl font-label-md text-label-md hover:bg-primary-container transition-colors" type="submit">Join</button>
+          </div>
+          <span class="font-label-sm text-[10px] text-on-surface-variant/70">Discrete frequency. Unsubscribe anytime.</span>
+        </form>
+        <div class="pt-space-xs text-on-surface-variant">
+          <p class="font-body-sm text-body-sm font-medium text-on-surface">Atelier Showroom &amp; Archives</p>
+          <p class="font-body-sm text-body-sm">Bredgade 28, 1260 København, Denmark</p>
+          <p class="font-label-sm text-label-sm text-tertiary mt-space-xs">care@libson.et · +251 911 234 567</p>
+        </div>
+      </div>
+    </div>
+    <div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md">
+      <div class="flex items-center gap-space-sm text-on-surface-variant">
+        <span class="material-symbols-outlined text-secondary text-[18px]">nature</span>
+        <span class="font-label-sm text-label-sm">100% Carbon Neutral Craft &amp; Climate Compensated Delivery</span>
+      </div>
+      <div class="flex items-center gap-space-lg font-body-sm text-body-sm text-on-surface-variant">
+        <a class="hover:text-on-surface transition-colors" href="policy.html#privacy">Privacy Policy</a>
+        <a class="hover:text-on-surface transition-colors" href="policy.html#terms">Terms of Atelier</a>
+        <a class="hover:text-on-surface transition-colors" href="policy.html#warranty">Ergonomic Warranty (10 Yrs)</a>
+        <a class="hover:text-on-surface transition-colors" href="policy.html#accessibility">Accessibility</a>
+      </div>
+      <div class="font-body-sm text-body-sm text-on-surface-variant">© 2025 Libson Atelier Copenhagen. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Category Pill Toggle
+  const pills = document.querySelectorAll('.category-pill');
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      pills.forEach(p => {
+        p.classList.remove('bg-on-surface', 'text-surface');
+        p.classList.add('bg-surface-container', 'text-on-surface');
+      });
+      pill.classList.remove('bg-surface-container', 'text-on-surface');
+      pill.classList.add('bg-on-surface', 'text-surface');
+    });
+  });
+
+  // Grid Layout Switcher (3 cols vs 4 cols on large screens)
+  const gridThreeBtn = document.getElementById('gridThreeBtn');
+  const gridFourBtn = document.getElementById('gridFourBtn');
+  const catalogGrid = document.getElementById('productCatalogGrid');
+  if (gridThreeBtn && gridFourBtn && catalogGrid) {
+    gridThreeBtn.addEventListener('click', () => {
+      catalogGrid.className = 'grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-gutter';
+      gridThreeBtn.classList.add('bg-surface', 'text-on-surface');
+      gridThreeBtn.classList.remove('text-on-surface-variant');
+      gridFourBtn.classList.remove('bg-surface', 'text-on-surface');
+      gridFourBtn.classList.add('text-on-surface-variant');
+    });
+    gridFourBtn.addEventListener('click', () => {
+      catalogGrid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4';
+      gridFourBtn.classList.add('bg-surface', 'text-on-surface');
+      gridFourBtn.classList.remove('text-on-surface-variant');
+      gridThreeBtn.classList.remove('bg-surface', 'text-on-surface');
+      gridThreeBtn.classList.add('text-on-surface-variant');
+    });
+  }
+
+  // Dynamic Price Range Output
+  const priceRange = document.getElementById('priceRange');
+  const priceDisplay = document.getElementById('priceDisplayValue');
+  if (priceRange && priceDisplay) {
+    priceRange.addEventListener('input', (e) => {
+      priceDisplay.textContent = 'ETB 52,500 – ETB ' + Number(e.target.value).toLocaleString();
+    });
+  }
+
+  // Lead Time Toggle Buttons
+  const leadBtns = document.querySelectorAll('.lead-btn');
+  leadBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      leadBtns.forEach(b => b.classList.remove('bg-surface-container-high'));
+      btn.classList.add('bg-surface-container-high');
+    });
+  });
+
+  // Mobile Filter Drawer Toggle
+  const mobileFilterBtn = document.getElementById('mobileFilterToggle');
+  const filterRail = document.getElementById('filterRail');
+  if (mobileFilterBtn && filterRail) {
+    mobileFilterBtn.addEventListener('click', () => {
+      filterRail.classList.toggle('hidden');
+      window.scrollTo({
+        top: filterRail.getBoundingClientRect().top + window.scrollY - 100,
+        behavior: 'smooth'
+      });
+    });
+  }
+</script>
+<script src="app.js" defer></script>
+</body>
+</html>
