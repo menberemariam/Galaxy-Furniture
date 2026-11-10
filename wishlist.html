@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="no-store" http-equiv="Cache-Control"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="tailwind-config.js?v=3"></script>
+<title>Wishlist | Galaxy Furniture</title>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased">
+
+<header class="sticky top-0 z-50 w-full bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+  <div class="w-full px-margin lg:px-margin-desktop h-20 flex items-center justify-between gap-space-md">
+    <a href="index.html" class="flex items-center gap-space-md flex-shrink-0">
+      <div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center flex-shrink-0">
+        <span class="material-symbols-outlined text-on-primary text-[22px]">chair</span>
+      </div>
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-headline-sm tracking-tight text-on-surface leading-none">Galaxy Furniture</span>
+        <span class="font-label-sm text-[10px] tracking-[0.2em] text-on-surface-variant uppercase mt-space-xs">Addis Ababa Atelier</span>
+      </div>
+    </a>
+    <nav class="hidden xl:flex items-center gap-space-lg">
+      <a class="font-label-md text-label-md tracking-wider text-on-surface-variant hover:text-on-surface transition-colors py-1" href="index.html">Home</a>
+      <a class="font-label-md text-label-md tracking-wider text-on-surface-variant hover:text-on-surface transition-colors py-1" href="catalog.html">Catalog</a>
+      <a class="font-label-md text-label-md tracking-wider text-on-surface-variant hover:text-on-surface transition-colors py-1" href="configurator.html">Customize</a>
+      <a class="font-label-md text-label-md tracking-wider text-on-surface-variant hover:text-on-surface transition-colors py-1" href="checkout.html">Trial</a>
+      <a class="font-label-md text-label-md tracking-wider text-on-surface-variant hover:text-on-surface transition-colors py-1" href="about.html">About</a>
+    </nav>
+    <div class="flex items-center gap-space-sm lg:gap-space-md">
+      <a aria-label="Wishlist" aria-current="page" class="relative p-2 text-primary transition-colors" href="wishlist.html">
+        <span class="material-symbols-outlined text-[22px]">favorite</span>
+        <span data-wishlist-count class="absolute top-1 right-1 h-4 w-4 bg-primary text-on-primary font-label-sm text-[10px] rounded-full flex items-center justify-center font-bold">0</span>
+      </a>
+      <a aria-label="Shopping bag" class="flex items-center gap-space-xs bg-surface-container hover:bg-surface-container-high px-space-md py-2 rounded-full transition-all" href="cart.html">
+        <span class="material-symbols-outlined text-primary text-[20px]">shopping_bag</span>
+        <div class="hidden sm:flex flex-col text-left">
+          <span data-cart-total class="font-label-sm text-label-sm text-on-surface font-semibold">ETB 0</span>
+          <span data-cart-count class="font-label-sm text-[10px] text-on-surface-variant">0 items</span>
+        </div>
+      </a>
+      <a href="profile.html" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0" aria-label="Account">
+        <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+      </a>
+      <button type="button" data-mobile-toggle class="xl:hidden p-2 text-on-surface" aria-label="Open menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </div>
+  <nav id="mobileNav" class="hidden xl:hidden border-t border-outline-variant/50 bg-surface px-margin py-space-sm">
+    <a class="block py-2 font-label-md text-label-md text-on-surface-variant" href="index.html">Home</a>
+    <a class="block py-2 font-label-md text-label-md text-on-surface-variant" href="catalog.html">Catalog</a>
+    <a class="block py-2 font-label-md text-label-md text-on-surface-variant" href="configurator.html">Customize</a>
+    <a class="block py-2 font-label-md text-label-md text-on-surface-variant" href="checkout.html">Trial</a>
+    <a class="block py-2 font-label-md text-label-md text-on-surface-variant" href="about.html">About</a>
+  </nav>
+</header>
+
+<main class="w-full px-margin lg:px-margin-desktop py-space-xl lg:py-space-2xl">
+  <div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+      <div class="flex flex-col gap-space-sm">
+        <span class="font-label-sm text-label-sm uppercase tracking-[0.25em] text-primary">My Favourites</span>
+        <h1 class="font-headline-lg text-headline-lg text-on-surface">Saved pieces</h1>
+        <p class="font-body-md text-body-md text-on-surface-variant max-w-xl">Keep the chairs you love in one place, then add them to your cart when you are ready.</p>
+      </div>
+      <div class="flex flex-wrap items-center gap-space-sm">
+        <button id="wishlistAddAll" class="inline-flex items-center gap-space-sm bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded-full shadow-md hover:bg-primary-container transition-all" type="button">
+          <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+          <span>Add all to cart</span>
+        </button>
+        <a class="inline-flex items-center gap-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md px-6 py-3 rounded-full shadow-sm transition-all" href="catalog.html">
+          <span class="material-symbols-outlined text-tertiary text-[18px]">search</span>
+          <span>Find more chairs</span>
+        </a>
+      </div>
+    </div>
+
+    <div id="wishlistItems" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+      <div class="bg-surface-container p-8 rounded-2xl text-center sm:col-span-2 lg:col-span-3">
+        <p class="font-body-md text-body-md text-on-surface-variant">Loading your saved pieces…</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+      <div class="bg-surface-container-low p-6 rounded-2xl flex items-start gap-space-sm">
+        <span class="material-symbols-outlined text-primary text-[22px]">favorite</span>
+        <div>
+          <p class="font-label-md text-label-md text-on-surface">Save for later</p>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Tap the heart on any chair in the catalog to keep it here.</p>
+        </div>
+      </div>
+      <div class="bg-surface-container-low p-6 rounded-2xl flex items-start gap-space-sm">
+        <span class="material-symbols-outlined text-primary text-[22px]">local_shipping</span>
+        <div>
+          <p class="font-label-md text-label-md text-on-surface">Free showroom pickup</p>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Collect from our Addis Ababa showroom at no extra cost.</p>
+        </div>
+      </div>
+      <div class="bg-surface-container-low p-6 rounded-2xl flex items-start gap-space-sm">
+        <span class="material-symbols-outlined text-primary text-[22px]">verified_user</span>
+        <div>
+          <p class="font-label-md text-label-md text-on-surface">100-day trial</p>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Live with your chair before you decide it is the one.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="w-full bg-surface-container-low pt-space-2xl pb-space-xl text-on-surface border-t border-outline-variant/50">
+  <div class="w-full px-margin lg:px-margin-desktop">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop pb-space-xl">
+      <div class="flex flex-col gap-space-md">
+        <div class="flex items-center gap-space-sm">
+          <div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-on-primary text-[22px]">chair</span>
+          </div>
+          <span class="font-headline-sm text-headline-sm text-on-surface">Galaxy Furniture</span>
+        </div>
+        <p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">Comfortable, well-made furniture for Ethiopian homes, backed by honest service and a 100-day trial.</p>
+      </div>
+      <div class="flex flex-col gap-space-sm">
+        <h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Shop</h3>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="catalog.html">Full catalog</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="configurator.html">Customize a chair</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="wishlist.html">Saved pieces</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="cart.html">Shopping cart</a>
+      </div>
+      <div class="flex flex-col gap-space-sm">
+        <h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Company</h3>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="about.html">About us</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="checkout.html">Book a trial</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="profile.html">My profile</a>
+      </div>
+      <div class="flex flex-col gap-space-sm">
+        <h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Contact</h3>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">Bole Road, Friendship Building<br/>Addis Ababa, Ethiopia</p>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">+251 911 234 567<br/>care@galaxyfurniture.et</p>
+      </div>
+    </div>
+    <div class="pt-space-lg border-t border-outline-variant/50 flex flex-col md:flex-row items-center justify-between gap-space-md">
+      <span class="font-body-sm text-body-sm text-on-surface-variant">© 2026 Galaxy Furniture. All rights reserved.</span>
+      <div class="flex flex-wrap items-center justify-center gap-space-md font-body-sm text-body-sm text-on-surface-variant">
+        <a class="hover:text-on-surface transition-colors" href="about.html">About</a>
+        <a class="hover:text-on-surface transition-colors" href="wishlist.html">Wishlist</a>
+        <a class="hover:text-on-surface transition-colors" href="profile.html">Profile</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js?v=3" defer></script>
+</body>
+</html>

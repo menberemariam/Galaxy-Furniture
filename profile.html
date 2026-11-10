@@ -1,85 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Profile | Libson Chairs</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="no-store" http-equiv="Cache-Control"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="tailwind-config.js?v=3"></script>
+<title>My Profile | Galaxy Furniture</title>
 </head>
-<body>
-  <header class="border-b border-border py-4">
-    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
-      <a href="index.html" class="font-display font-bold text-xl tracking-wider">Libson Chairs</a>
-      <nav class="hidden md:flex items-center gap-6">
-        <a href="cart.html" class="font-label-sm text-label-sm hover:text-primary transition-colors">Cart</a>
-        <a href="wishlist.html" class="font-label-sm text-label-sm hover:text-primary transition-colors">Wishlist</a>
-        <a href="profile.html" class="font-label-sm text-label-sm hover:text-primary transition-colors">Profile</a>
-        <a href="about.html" class="font-label-sm text-label-sm hover:text-primary transition-colors">About</a>
-      </nav>
-      <a href="profile.html" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0" aria-label="Account">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+<body class="bg-surface font-body-md text-on-surface antialiased">
+
+<header class="sticky top-0 z-50 w-full bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+  <div class="w-full px-margin lg:px-margin-desktop h-20 flex items-center justify-between gap-space-md">
+    <a href="index.html" class="flex items-center gap-space-md flex-shrink-0">
+      <div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center flex-shrink-0">
+        <span class="material-symbols-outlined text-on-primary text-[22px]">chair</span>
+      </div>
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-headline-sm tracking-tight text-on-surface leading-none">Galaxy Furniture</span>
+        <span class="font-label-sm text-[10px] tracking-[0.2em] text-on-surface-variant uppercase mt-space-xs">Addis Ababa Atelier</span>
+      </div>
+    </a>
+    <nav class="hidden xl:flex items-center gap-space-lg">
+      <a class="font-label-md text-label-md tracking-wider text-on-surface-variant hover:text-on-surface transition-colors py-1" href="index.html">Home</a>
+      <a class="font-label-md text-label-md tracking-wider text-on-surface-variant hover:text-on-surface transition-colors py-1" href="catalog.html">Catalog</a>
+      <a class="font-label-md text-label-md tracking-wider text-on-surface-variant hover:text-on-surface transition-colors py-1" href="configurator.html">Customize</a>
+      <a class="font-label-md text-label-md tracking-wider text-on-surface-variant hover:text-on-surface transition-colors py-1" href="checkout.html">Trial</a>
+      <a class="font-label-md text-label-md tracking-wider text-on-surface-variant hover:text-on-surface transition-colors py-1" href="about.html">About</a>
+    </nav>
+    <div class="flex items-center gap-space-sm lg:gap-space-md">
+      <a aria-label="Wishlist" class="relative p-2 text-on-surface-variant hover:text-on-surface transition-colors" href="wishlist.html">
+        <span class="material-symbols-outlined text-[22px]">favorite</span>
+        <span data-wishlist-count class="absolute top-1 right-1 h-4 w-4 bg-primary text-on-primary font-label-sm text-[10px] rounded-full flex items-center justify-center font-bold">0</span>
       </a>
+      <a aria-label="Shopping bag" class="flex items-center gap-space-xs bg-surface-container hover:bg-surface-container-high px-space-md py-2 rounded-full transition-all" href="cart.html">
+        <span class="material-symbols-outlined text-primary text-[20px]">shopping_bag</span>
+        <div class="hidden sm:flex flex-col text-left">
+          <span data-cart-total class="font-label-sm text-label-sm text-on-surface font-semibold">ETB 0</span>
+          <span data-cart-count class="font-label-sm text-[10px] text-on-surface-variant">0 items</span>
+        </div>
+      </a>
+      <a href="profile.html" aria-current="page" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0 ring-2 ring-primary/30" aria-label="Account">
+        <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+      </a>
+      <button type="button" data-mobile-toggle class="xl:hidden p-2 text-on-surface" aria-label="Open menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
     </div>
-  </header>
+  </div>
+  <nav id="mobileNav" class="hidden xl:hidden border-t border-outline-variant/50 bg-surface px-margin py-space-sm">
+    <a class="block py-2 font-label-md text-label-md text-on-surface-variant" href="index.html">Home</a>
+    <a class="block py-2 font-label-md text-label-md text-on-surface-variant" href="catalog.html">Catalog</a>
+    <a class="block py-2 font-label-md text-label-md text-on-surface-variant" href="configurator.html">Customize</a>
+    <a class="block py-2 font-label-md text-label-md text-on-surface-variant" href="checkout.html">Trial</a>
+    <a class="block py-2 font-label-md text-label-md text-on-surface-variant" href="about.html">About</a>
+    <a class="block py-2 font-label-md text-label-md text-primary font-semibold" href="profile.html">Profile</a>
+  </nav>
+</header>
 
-  <main class="max-w-7xl mx-auto py-8">
-    <div class="grid max-w-2xl mx-auto gap-6">
-      <div class="bg-surface p-6 rounded-lg">
-        <h2 class="font-display font-bold text-2xl mb-4">Account Details</h2>
-        <div class="space-y-3">
-          <div><span class="font-label-md text-label-md">Name:</span> <span class="font-label text-label">Abraham</span></div>
-          <div><span class="font-label-md text-label-md">Email:</span> <span class="font-label text-label">abraham@libson.et</span></div>
-          <div><span class="font-label-md text-label-md">Phone:</span> <span class="font-label text-label">+251 911 234 567</span></div>
+<main class="w-full px-margin lg:px-margin-desktop py-space-xl lg:py-space-2xl">
+  <div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+
+    <section class="relative overflow-hidden rounded-3xl bg-surface-container p-6 md:p-10 flex flex-col md:flex-row md:items-center justify-between gap-space-lg">
+      <div class="absolute -top-16 -right-10 w-56 h-56 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
+      <div class="flex items-center gap-space-md relative z-10">
+        <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-primary flex items-center justify-center flex-shrink-0 shadow-lg">
+          <span class="material-symbols-outlined text-on-primary text-[34px] md:text-[42px]">person</span>
+        </div>
+        <div class="flex flex-col gap-1">
+          <span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-primary">My Account</span>
+          <h1 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-on-surface" data-profile-name>Galaxy Client</h1>
+          <p class="font-body-sm text-body-sm text-on-surface-variant" data-profile-email>client@galaxyfurniture.et</p>
+          <p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px]">location_on</span>
+            <span data-profile-city>Addis Ababa</span>
+          </p>
         </div>
       </div>
-      <div class="bg-surface p-6 rounded-lg">
-        <h2 class="font-display font-bold text-2xl mb-4">Order History</h2>
-        <div class="space-y-3">
-          <div class="flex justify-between py-2 border-b">
-            <span>Order #LIB-001</span>
-            <span class="font-semibold">ETB 177,000</span>
-          </div>
-          <div class="flex justify-between py-2 border-b">
-            <span>Order #LIB-002</span>
-            <span class="font-semibold">ETB 210,000</span>
-          </div>
-        </div>
+      <div class="flex flex-wrap gap-space-sm relative z-10">
+        <a class="inline-flex items-center gap-space-sm bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded-full shadow-md hover:bg-primary-container transition-all" href="catalog.html">
+          <span class="material-symbols-outlined text-[18px]">storefront</span>
+          <span>Continue shopping</span>
+        </a>
+        <a class="inline-flex items-center gap-space-sm bg-surface hover:bg-surface-container-high text-on-surface font-label-md text-label-md px-6 py-3 rounded-full shadow-sm transition-all" href="wishlist.html">
+          <span class="material-symbols-outlined text-tertiary text-[18px]">favorite</span>
+          <span>My favourites</span>
+        </a>
       </div>
-    </div>
+    </section>
 
-    <div class="mt-8 pt-8 border-t">
-      <h2 class="font-display font-bold text-xl mb-4">Account Settings</h2>
-      <div class="grid grid-cols-2 gap-4">
-        <button class="w-full py-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md uppercase transition-all hover:bg-primary-container">Change Password</button>
-        <button class="w-full py-3 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md uppercase transition-all hover:bg-secondary-container">Security Settings</button>
-      </div>
-    </div>
-  </main>
-
-  <footer class="border-t border-border py-8 mt-auto">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="grid grid-cols-2 gap-8 mb-6">
+    <section class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+      <div class="bg-surface-container-low p-6 rounded-2xl shadow-sm flex items-center gap-space-md">
+        <span class="material-symbols-outlined text-primary text-[30px]">receipt_long</span>
         <div>
-          <h3 class="font-display font-semibold text-lg mb-3">Libson Chairs</h3>
-          <p class="text-label text-sm">care@libson.et · +251 911 234 567</p>
-        </div>
-        <div>
-          <h3 class="font-display font-semibold text-lg mb-3">Company</h3>
-          <ul class="space-y-2">
-            <li><a href="about.html" class="text-label hover:text-primary transition-colors">About Us</a></li>
-            <li><a href="policy.html#privacy" class="text-label hover:text-primary transition-colors">Privacy Policy</a></li>
-            <li><a href="policy.html#terms" class="text-label hover:text-primary transition-colors">Terms of Atelier</a></li>
-            <li><a href="policy.html#warranty" class="text-label hover:text-primary transition-colors">Ergonomic Warranty (10 Yrs)</a></li>
-            <li><a href="policy.html#accessibility" class="text-label hover:text-primary transition-colors">Accessibility</a></li>
-          </ul>
+          <p class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Orders placed</p>
+          <p class="font-headline-md text-headline-md text-on-surface" data-profile-orders>0</p>
         </div>
       </div>
-      <div class="border-t pt-4 text-center text-label-sm text-on-surface-variant">
-        © 2026 Libson Chairs. All rights reserved.
+      <div class="bg-surface-container-low p-6 rounded-2xl shadow-sm flex items-center gap-space-md">
+        <span class="material-symbols-outlined text-primary text-[30px]">favorite</span>
+        <div>
+          <p class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Saved pieces</p>
+          <p class="font-headline-md text-headline-md text-on-surface" data-profile-wishlist>0</p>
+        </div>
+      </div>
+      <div class="bg-surface-container-low p-6 rounded-2xl shadow-sm flex items-center gap-space-md">
+        <span class="material-symbols-outlined text-primary text-[30px]">shopping_bag</span>
+        <div>
+          <p class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Cart value</p>
+          <p class="font-headline-md text-headline-md text-on-surface" data-profile-cart>ETB 0</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="flex flex-nowrap items-center gap-space-xs bg-surface-container p-1.5 rounded-full w-full md:w-fit overflow-x-auto">
+      <button type="button" class="profile-tab bg-primary text-on-primary font-label-md text-label-md px-5 py-2.5 rounded-full transition-colors whitespace-nowrap" data-profile-tab="overview">Overview</button>
+      <button type="button" class="profile-tab text-on-surface-variant font-label-md text-label-md px-5 py-2.5 rounded-full transition-colors whitespace-nowrap" data-profile-tab="orders">Orders</button>
+      <button type="button" class="profile-tab text-on-surface-variant font-label-md text-label-md px-5 py-2.5 rounded-full transition-colors whitespace-nowrap" data-profile-tab="profile">Profile details</button>
+      <button type="button" class="profile-tab text-on-surface-variant font-label-md text-label-md px-5 py-2.5 rounded-full transition-colors whitespace-nowrap" data-profile-tab="settings">Settings</button>
+    </div>
+
+    <section id="panel-overview" class="profile-panel grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+      <div class="lg:col-span-2 bg-surface-container-low p-6 md:p-8 rounded-2xl shadow-sm flex flex-col gap-space-md">
+        <h2 class="font-headline-sm text-headline-sm text-on-surface">Account summary</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+          <div class="bg-surface p-5 rounded-xl">
+            <p class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Full name</p>
+            <p class="font-body-md text-body-md text-on-surface mt-1" data-profile-name>Galaxy Client</p>
+          </div>
+          <div class="bg-surface p-5 rounded-xl">
+            <p class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Email</p>
+            <p class="font-body-md text-body-md text-on-surface mt-1 break-all" data-profile-email>client@galaxyfurniture.et</p>
+          </div>
+          <div class="bg-surface p-5 rounded-xl">
+            <p class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Phone</p>
+            <p class="font-body-md text-body-md text-on-surface mt-1" data-profile-phone>+251 911 234 567</p>
+          </div>
+          <div class="bg-surface p-5 rounded-xl">
+            <p class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">City</p>
+            <p class="font-body-md text-body-md text-on-surface mt-1" data-profile-city>Addis Ababa</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-space-sm pt-space-xs">
+          <button type="button" class="bg-surface hover:bg-surface-container-high text-on-surface font-label-md text-label-md px-5 py-2.5 rounded-full shadow-sm transition-all" data-profile-tab="profile">Edit my details</button>
+          <button type="button" class="bg-surface hover:bg-surface-container-high text-on-surface font-label-md text-label-md px-5 py-2.5 rounded-full shadow-sm transition-all" data-profile-tab="orders">View my orders</button>
+        </div>
+      </div>
+      <div class="bg-surface-container-low p-6 md:p-8 rounded-2xl shadow-sm flex flex-col gap-space-sm">
+        <h2 class="font-headline-sm text-headline-sm text-on-surface">Need help?</h2>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">Our team is happy to help with delivery, assembly, or choosing the right piece.</p>
+        <a class="inline-flex items-center gap-space-sm text-primary font-label-md text-label-md mt-space-xs" href="about.html">
+          <span class="material-symbols-outlined text-[18px]">call</span>
+          <span>Contact the showroom</span>
+        </a>
+        <a class="inline-flex items-center gap-space-sm text-primary font-label-md text-label-md" href="checkout.html">
+          <span class="material-symbols-outlined text-[18px]">event</span>
+          <span>Book a trial visit</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="panel-orders" class="profile-panel hidden flex flex-col gap-space-md">
+      <div class="flex items-center justify-between gap-space-md">
+        <h2 class="font-headline-sm text-headline-sm text-on-surface">My orders</h2>
+        <a class="font-label-md text-label-md text-primary" href="catalog.html">Start a new order</a>
+      </div>
+      <div id="profileOrders" class="flex flex-col gap-space-md">
+        <div class="bg-surface-container-low p-6 rounded-2xl">
+          <p class="font-body-md text-body-md text-on-surface-variant">Loading orders…</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="panel-profile" class="profile-panel hidden bg-surface-container-low p-6 md:p-8 rounded-2xl shadow-sm">
+      <h2 class="font-headline-sm text-headline-sm text-on-surface mb-space-lg">Profile details</h2>
+      <form id="profileForm" class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+        <label class="flex flex-col gap-1.5">
+          <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Full name</span>
+          <input class="bg-surface px-space-md py-3 rounded-xl font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/40 shadow-sm" name="fullName" type="text" autocomplete="name" placeholder="Your full name"/>
+        </label>
+        <label class="flex flex-col gap-1.5">
+          <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Email address</span>
+          <input class="bg-surface px-space-md py-3 rounded-xl font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/40 shadow-sm" name="email" type="email" autocomplete="email" placeholder="you@example.com"/>
+        </label>
+        <label class="flex flex-col gap-1.5">
+          <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Phone number</span>
+          <input class="bg-surface px-space-md py-3 rounded-xl font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/40 shadow-sm" name="phone" type="tel" autocomplete="tel" placeholder="+251 ..."/>
+        </label>
+        <label class="flex flex-col gap-1.5">
+          <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">City</span>
+          <input class="bg-surface px-space-md py-3 rounded-xl font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/40 shadow-sm" name="city" type="text" autocomplete="address-level2" placeholder="Addis Ababa"/>
+        </label>
+        <label class="flex flex-col gap-1.5 md:col-span-2">
+          <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Delivery address</span>
+          <input class="bg-surface px-space-md py-3 rounded-xl font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/40 shadow-sm" name="address" type="text" autocomplete="street-address" placeholder="Street, building, landmark"/>
+        </label>
+        <div class="md:col-span-2 flex flex-wrap items-center gap-space-md pt-space-xs">
+          <button class="bg-primary text-on-primary font-label-md text-label-md px-7 py-3 rounded-full shadow-md hover:bg-primary-container transition-all" type="submit">Save changes</button>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">Your details are saved on this device.</p>
+        </div>
+      </form>
+    </section>
+
+    <section id="panel-settings" class="profile-panel hidden bg-surface-container-low p-6 md:p-8 rounded-2xl shadow-sm flex flex-col gap-space-md">
+      <h2 class="font-headline-sm text-headline-sm text-on-surface">Settings</h2>
+      <p class="font-body-sm text-body-sm text-on-surface-variant">Clear saved data on this device. This cannot be undone.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+        <button type="button" data-clear-store="cart" class="bg-surface hover:bg-surface-container-high text-on-surface font-label-md text-label-md px-5 py-3 rounded-xl shadow-sm transition-all">Clear cart</button>
+        <button type="button" data-clear-store="wishlist" class="bg-surface hover:bg-surface-container-high text-on-surface font-label-md text-label-md px-5 py-3 rounded-xl shadow-sm transition-all">Clear favourites</button>
+        <button type="button" data-clear-store="all" class="bg-primary text-on-primary font-label-md text-label-md px-5 py-3 rounded-xl shadow-sm hover:bg-primary-container transition-all">Reset everything</button>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="w-full bg-surface-container-low pt-space-2xl pb-space-xl text-on-surface border-t border-outline-variant/50">
+  <div class="w-full px-margin lg:px-margin-desktop">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop pb-space-xl">
+      <div class="flex flex-col gap-space-md">
+        <div class="flex items-center gap-space-sm">
+          <div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-on-primary text-[22px]">chair</span>
+          </div>
+          <span class="font-headline-sm text-headline-sm text-on-surface">Galaxy Furniture</span>
+        </div>
+        <p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">Comfortable, well-made furniture for Ethiopian homes, backed by honest service and a 100-day trial.</p>
+      </div>
+      <div class="flex flex-col gap-space-sm">
+        <h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Shop</h3>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="catalog.html">Full catalog</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="configurator.html">Customize a chair</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="wishlist.html">Saved pieces</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="cart.html">Shopping cart</a>
+      </div>
+      <div class="flex flex-col gap-space-sm">
+        <h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Company</h3>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="about.html">About us</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="checkout.html">Book a trial</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="profile.html">My profile</a>
+      </div>
+      <div class="flex flex-col gap-space-sm">
+        <h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Contact</h3>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">Bole Road, Friendship Building<br/>Addis Ababa, Ethiopia</p>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">+251 911 234 567<br/>care@galaxyfurniture.et</p>
       </div>
     </div>
-  </footer>
+    <div class="pt-space-lg border-t border-outline-variant/50 flex flex-col md:flex-row items-center justify-between gap-space-md">
+      <span class="font-body-sm text-body-sm text-on-surface-variant">© 2026 Galaxy Furniture. All rights reserved.</span>
+      <div class="flex flex-wrap items-center justify-center gap-space-md font-body-sm text-body-sm text-on-surface-variant">
+        <a class="hover:text-on-surface transition-colors" href="about.html">About</a>
+        <a class="hover:text-on-surface transition-colors" href="wishlist.html">Wishlist</a>
+        <a class="hover:text-on-surface transition-colors" href="profile.html">Profile</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
-  <script src="app.js" defer></script>
+<script src="app.js?v=3" defer></script>
 </body>
 </html>

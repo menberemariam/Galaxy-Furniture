@@ -4,15 +4,15 @@
   const $ = (selector, context = document) => context.querySelector(selector);
   const $$ = (selector, context = document) => Array.from(context.querySelectorAll(selector));
   const LS = {
-    cart: 'libson_cart',
-    wishlist: 'libson_wishlist',
-    profile: 'libson_profile',
-    orders: 'libson_orders',
-    trial: 'libson_trial'
+    cart: 'galaxy_furniture_cart',
+    wishlist: 'galaxy_furniture_wishlist',
+    profile: 'galaxy_furniture_profile',
+    orders: 'galaxy_furniture_orders',
+    trial: 'galaxy_furniture_trial'
   };
 
   const PRODUCTS = {
-    no01: { id: 'no01', name: 'Libson No. 01 Executive', price: 177000, img: 'images/office-chair.jpg', spec: 'Natural White Oak · Tuscan Cognac Leather', category: 'task', materials: 'oak leather', mechanics: 'lumbar armrest recline', rating: '4.9 (42)' },
+    no01: { id: 'no01', name: 'Galaxy Furniture No. 01 Executive', price: 177000, img: 'images/office-chair.jpg', spec: 'Natural White Oak · Tuscan Cognac Leather', category: 'task', materials: 'oak leather', mechanics: 'lumbar armrest recline', rating: '4.9 (42)' },
     klint: { id: 'klint', name: 'Klint Recline & Ottoman', price: 217500, img: 'images/brown-lounge.jpg', spec: 'Smoked Oak · Saddle Hide · Ottoman included', category: 'lounge', materials: 'oak leather', mechanics: 'recline lumbar', rating: '5.0 (28)' },
     nora: { id: 'nora', name: 'Nora Sculptural Dining', price: 73500, img: 'images/dining-chairs.jpg', spec: 'Steam-Bent Oak · Oat Linen Seat', category: 'dining', materials: 'oak linen', mechanics: 'waterfall', rating: '4.8 (64)' },
     arv: { id: 'arv', name: 'Arv Task Swivel Chair', price: 129000, img: 'images/office-desk.jpg', spec: '3D Wool Knit · Cast Aluminum Base', category: 'task', materials: 'aluminum wool', mechanics: 'lumbar recline', rating: '4.9 (51)' },
@@ -94,7 +94,7 @@
 
   function productFor(item) {
     if (item.customPrice) {
-      return { ...PRODUCTS.no01, price: item.customPrice, name: 'Libson No. 01 Executive (Custom)', spec: item.config || PRODUCTS.no01.spec };
+      return { ...PRODUCTS.no01, price: item.customPrice, name: 'Galaxy Furniture No. 01 Executive (Custom)', spec: item.config || PRODUCTS.no01.spec };
     }
     return PRODUCTS[item.id] || null;
   }
@@ -110,10 +110,10 @@
   }
 
   function toast(message) {
-    const existing = $('.libson-toast');
+    const existing = $('.galaxy-furniture-toast');
     if (existing) existing.remove();
     const el = document.createElement('div');
-    el.className = 'libson-toast fixed bottom-6 left-1/2 z-[999] -translate-x-1/2 rounded-full bg-on-surface px-5 py-3 text-surface shadow-lg font-label-md text-label-md';
+    el.className = 'galaxy-furniture-toast fixed bottom-6 left-1/2 z-[999] -translate-x-1/2 rounded-full bg-on-surface px-5 py-3 text-surface shadow-lg font-label-md text-label-md';
     el.textContent = message;
     document.body.appendChild(el);
     window.setTimeout(() => el.remove(), 2600);
@@ -218,8 +218,18 @@
   }
 
   function initButtons() {
+    const mobileToggle = $('[data-mobile-toggle]');
+    const mobileNav = $('#mobileNav');
+    if (mobileToggle && mobileNav) {
+      mobileToggle.addEventListener('click', () => {
+        mobileNav.classList.toggle('hidden');
+        const icon = mobileToggle.querySelector('.material-symbols-outlined');
+        if (icon) icon.textContent = mobileNav.classList.contains('hidden') ? 'menu' : 'close';
+      });
+    }
+
     $$('[data-book-trial]').forEach(btn => {
-      btn.addEventListener('click', () => { window.location.href = 'trial.html'; });
+      btn.addEventListener('click', () => { window.location.href = 'checkout.html'; });
     });
 
     $$('.product-card [aria-label="Add to Curated Collection"], [data-wishlist-id]').forEach(btn => {
@@ -258,7 +268,7 @@
           toast('Enter a valid email to join the salon list');
           return;
         }
-        toast('Welcome to the Libson salon list');
+        toast('Welcome to the Galaxy Furniture salon list');
         form.reset();
       });
     });
@@ -487,40 +497,43 @@
       addToCart(btn.dataset.addToCart);
     }));
     $$('[data-remove-wishlist]', box).forEach(btn => btn.addEventListener('click', () => toggleWishlist(btn.dataset.removeWishlist)));
+
+    const addAll = $('#wishlistAddAll');
+    if (addAll) {
+      if (!wish.length) {
+        addAll.classList.add('hidden');
+      } else {
+        addAll.classList.remove('hidden');
+        addAll.onclick = () => {
+          wish.forEach(id => addToCart(id));
+          save(LS.wishlist, []);
+          renderHeader();
+          renderWishlistPage();
+          syncWishlistButtons();
+        };
+      }
+    }
   }
 
   function initProfile() {
     const form = $('#profileForm');
     if (!form) return;
-    const saved = load(LS.profile, null);
-    if (saved) {
-      Object.entries(saved).forEach(([key, value]) => {
-        const field = form.elements.namedItem(key);
-        if (field) field.value = value;
-      });
+
+    const DEFAULTS = {
+      fullName: 'Abraham Tesfaye',
+      email: 'abraham@galaxyfurniture.et',
+      phone: '+251 911 234 567',
+      address: 'Bole Road, Friendship Building',
+      city: 'Addis Ababa'
+    };
+
+    function profileData() {
+      return Object.assign({}, DEFAULTS, load(LS.profile, null) || {});
     }
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const data = Object.fromEntries(new FormData(form).entries());
-      save(LS.profile, data);
-      toast('Profile saved');
-    });
 
-    $$('.profile-tab').forEach(tab => {
-      tab.addEventListener('click', () => {
-        const target = tab.dataset.profileTab;
-        $$('.profile-tab').forEach(t => {
-          const active = t === tab;
-          t.classList.toggle('bg-primary', active);
-          t.classList.toggle('text-on-primary', active);
-          t.classList.toggle('text-on-surface-variant', !active);
-        });
-        $$('.profile-panel').forEach(panel => panel.classList.toggle('hidden', panel.id !== 'panel-' + target));
-      });
-    });
-
-    const ordersBox = $('#profileOrders');
-    if (ordersBox) {
+    function renderOrders() {
+      const ordersBox = $('#profileOrders');
+      if (!ordersBox) return;
       ordersBox.innerHTML = getOrders().map(order => `
         <div class="bg-surface p-5 rounded-2xl shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
@@ -530,14 +543,73 @@
           <div class="flex items-center gap-4">
             <span class="font-label-sm text-label-sm text-secondary">${order.status || 'Processing'}</span>
             <span class="font-spec-numeral text-spec-numeral text-on-surface font-semibold">${formatETB(order.total)}</span>
-            <a href="order-confirmation.html?order=${order.id}" class="px-4 py-2 rounded-full bg-surface-container font-label-md text-label-md">View</a>
+            <a href="checkout.html" class="px-4 py-2 rounded-full bg-surface-container font-label-md text-label-md">View</a>
           </div>
         </div>`).join('');
     }
+
+    function renderSummary() {
+      const profile = profileData();
+      Object.entries(profile).forEach(([key, value]) => {
+        const field = form.elements.namedItem(key);
+        if (field) field.value = value;
+      });
+      $$('[data-profile-name]').forEach(el => { el.textContent = profile.fullName || 'Galaxy Client'; });
+      $$('[data-profile-email]').forEach(el => { el.textContent = profile.email || DEFAULTS.email; });
+      $$('[data-profile-phone]').forEach(el => { el.textContent = profile.phone || DEFAULTS.phone; });
+      $$('[data-profile-city]').forEach(el => { el.textContent = profile.city || DEFAULTS.city; });
+      $$('[data-profile-orders]').forEach(el => { el.textContent = String(getOrders().length); });
+      $$('[data-profile-wishlist]').forEach(el => { el.textContent = String(getWishlist().length); });
+      $$('[data-profile-cart]').forEach(el => { el.textContent = formatETB(cartTotals().total); });
+      renderOrders();
+    }
+
+    Object.entries(profileData()).forEach(([key, value]) => {
+      const field = form.elements.namedItem(key);
+      if (field) field.value = value;
+    });
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      save(LS.profile, data);
+      renderSummary();
+      toast('Profile saved');
+    });
+
+    $$('[data-profile-tab]').forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.profileTab;
+        $$('.profile-tab').forEach(t => {
+          const active = t.dataset.profileTab === target;
+          t.classList.toggle('bg-primary', active);
+          t.classList.toggle('text-on-primary', active);
+          t.classList.toggle('text-on-surface-variant', !active);
+        });
+        $$('.profile-panel').forEach(panel => panel.classList.toggle('hidden', panel.id !== 'panel-' + target));
+      });
+    });
+
+    $$('[data-clear-store]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const scope = btn.dataset.clearStore;
+        if (scope === 'cart' || scope === 'all') save(LS.cart, []);
+        if (scope === 'wishlist' || scope === 'all') save(LS.wishlist, []);
+        if (scope === 'profile' || scope === 'all') save(LS.profile, {});
+        renderHeader();
+        renderCartPage();
+        renderWishlistPage();
+        syncWishlistButtons();
+        renderSummary();
+        toast('Saved data cleared');
+      });
+    });
+
+    renderSummary();
   }
 
   function validateCheckout() {
-    const required = ['firstName', 'lastName', 'email', 'phone', 'address', 'city', 'postal', 'country'];
+    const required = ['given-name', 'surname', 'email', 'phone', 'street', 'city', 'postal', 'country'];
     const missing = required.map(id => document.getElementById(id)).filter(el => el && !el.value.trim());
     if (missing.length) {
       missing.forEach(el => el.classList.add('ring-2', 'ring-primary'));
@@ -556,20 +628,24 @@
       return;
     }
     const activePay = $('.pay-tab.bg-surface');
+    const fieldValue = (id, fallback) => {
+      const el = document.getElementById(id);
+      return el ? el.value.trim() : (fallback ? (document.getElementById(fallback) || {}).value || '' : '');
+    };
     const order = {
       id: 'LIB-ET-' + Math.floor(100000 + Math.random() * 900000),
       date: new Date().toISOString().slice(0, 10),
       total: totals.total,
       status: 'Confirmed · workshop scheduling',
       items: getCart(),
-      firstName: $('#firstName').value,
-      lastName: $('#lastName').value,
-      email: $('#email').value,
-      phone: $('#phone').value,
-      address: $('#address').value,
-      city: $('#city').value,
-      postal: $('#postal').value,
-      country: $('#country').value,
+      firstName: fieldValue('given-name', 'firstName'),
+      lastName: fieldValue('surname', 'lastName'),
+      email: fieldValue('email'),
+      phone: fieldValue('phone'),
+      address: fieldValue('street', 'address'),
+      city: fieldValue('city'),
+      postal: fieldValue('postal'),
+      country: fieldValue('country'),
       payment: activePay ? activePay.textContent.trim() : 'Card'
     };
     const orders = load(LS.orders, []) || [];
@@ -586,7 +662,7 @@
     const live = $('#liveChatBtn');
     if (live) {
       live.addEventListener('click', () => {
-        window.open('https://wa.me/251911234567?text=Hello%20Libson%20Atelier%2C%20I%20need%20ergonomic%20fitting%20help', '_blank');
+        window.open('https://wa.me/251911234567?text=Hello%20Galaxy Furniture%20Atelier%2C%20I%20need%20ergonomic%20fitting%20help', '_blank');
       });
     }
   }
@@ -654,5 +730,5 @@
     initPolicyTabs();
   });
 
-  window.LibsonApp = { formatETB, addToCart, addAccessory, toggleWishlist, getCart, getWishlist, placeOrder, toast, PRODUCTS };
+  window.GalaxyFurnitureApp = { formatETB, addToCart, addAccessory, toggleWishlist, getCart, getWishlist, placeOrder, toast, PRODUCTS };
 })();
